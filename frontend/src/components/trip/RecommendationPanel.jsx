@@ -73,6 +73,23 @@ export default function RecommendationPanel({
       setAddingId(null);
     }
   };
+  const handleAddRestaurant = async (rest) => {
+    if (!stopId || !activityDate) return;
+    setAddingId(rest.id);
+    try {
+      await tripsApi.addActivity(stopId, {
+        custom_place_name: rest.name,
+        activity_date: activityDate,
+        notes: `Cuisine: ${rest.cuisine}. Must try: ${rest.must_try_dish}`,
+        custom_cost: 0,
+      });
+      if (onAdded) onAdded();
+    } catch (err) {
+      alert(err?.response?.data?.detail || 'Could not add restaurant. Check that the date is within the stop dates.');
+    } finally {
+      setAddingId(null);
+    }
+  };
 
   if (!cityId) return null;
   if (loading) {
@@ -200,6 +217,15 @@ export default function RecommendationPanel({
                     </p>
                     {r.notes && <p className="text-xs text-slate-400 mt-0.5 line-clamp-1">{r.notes}</p>}
                   </div>
+                  {stopId && activityDate && (
+                    <button
+                      onClick={() => handleAddRestaurant(r)}
+                      disabled={addingId === r.id}
+                      className="shrink-0 text-xs bg-indigo-600 text-white px-3 py-1.5 rounded-lg font-medium hover:bg-indigo-700 disabled:opacity-50 transition"
+                    >
+                      {addingId === r.id ? '...' : '+ Add'}
+                    </button>
+                  )}
                 </div>
               </div>
             ))
