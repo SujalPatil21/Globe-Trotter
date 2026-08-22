@@ -7,7 +7,7 @@ app = FastAPI(title="GlobeTrotter Backend")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173", "http://127.0.0.1:5173"],
+    allow_origins=["http://localhost:5173", "http://127.0.0.1:5173", "http://localhost:5174", "http://127.0.0.1:5174"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -61,7 +61,7 @@ async def validation_exception_handler(request: Request, exc: RequestValidationE
 def health_check():
     return {"status": "Auth service is running."}
 
-from app.api.endpoints import trips, master, stops, public, dashboard, saved_destinations, expenses, recommendations, community
+from app.api.endpoints import trips, master, stops, public, dashboard, saved_destinations, expenses, recommendations, community, users
 
 app.include_router(auth_router)
 app.include_router(trips.router, prefix="/api")
@@ -73,3 +73,5 @@ app.include_router(saved_destinations.router, prefix="/api")
 app.include_router(expenses.router, prefix="/api")
 app.include_router(recommendations.router, prefix="/api")
 app.include_router(community.router, prefix="/api")
+app.include_router(users.router, prefix="/api")
+

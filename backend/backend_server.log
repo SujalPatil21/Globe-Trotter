@@ -63,4 +63,2087 @@ C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\jwt\api
 INFO:     127.0.0.1:61225 - "GET /api/dashboard HTTP/1.1" 200 OK
 INFO:     127.0.0.1:61225 - "GET /api/cities HTTP/1.1" 200 OK
 WARNING:  WatchFiles detected changes in 'app\schemas\recommendation.py', 'app\api\endpoints\saved_destinations.py', 'app\auth\repositories\repository.py', 'alter_db2.py', 'app\schemas\trip.py', 'app\api\endpoints\stops.py', 'app\auth\services\email_service.py', 'app\auth\services\password_service.py', 'seed_community.py', 'app\auth\services\otp_service.py', 'app\auth\services\auth_service.py', 'app\auth\services\jwt_service.py', 'app\api\endpoints\dashboard.py', 'app\api\endpoints\master.py', 'app\auth\security\permissions.py', 'app\auth\security\dependencies.py', 'app\auth\constants.py', 'app\auth\schemas\responses.py', 'app\models\__init__.py', 'app\models\master.py', 'app\main.py', 'app\auth\validators\validators.py', 'app\services\recommendation_service.py', 'app\schemas\master.py', 'app\models\trip.py', 'app\api\endpoints\trips.py', 'app\core\config.py', 'app\auth\schemas\schemas.py', 'alter_db.py', 'app\api\endpoints\community.py', 'app\api\endpoints\public.py', 'app\auth\exceptions\exceptions.py', 'app\api\endpoints\recommendations.py', 'app\schemas\community.py', 'app\auth\controllers\router.py', 'seed_data.py', 'app\models\user.py', 'app\api\endpoints\expenses.py', 'app\db\database.py'. Reloading...
- 
+ INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [26492]
+INFO:     Started server process [26296]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     127.0.0.1:55753 - "OPTIONS /api/dashboard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50454 - "OPTIONS /api/dashboard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55753 - "OPTIONS /api/cities HTTP/1.1" 200 OK
+C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\jwt\api_jwt.py:368: InsecureKeyLengthWarning: The HMAC key is 30 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:     127.0.0.1:50454 - "GET /api/dashboard HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:50454 - "GET /api/dashboard HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:55753 - "GET /api/cities HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56435 - "OPTIONS /auth/login HTTP/1.1" 400 Bad Request
+WARNING:  WatchFiles detected changes in 'app\main.py'. Reloading...
+ INFO:     127.0.0.1:64991 - "OPTIONS /auth/login HTTP/1.1" 400 Bad Request
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [26296]
+INFO:     Started server process [24088]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     127.0.0.1:55447 - "GET /api/dashboard HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:55447 - "GET /api/cities HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55447 - "GET /api/dashboard HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:50185 - "OPTIONS /auth/login HTTP/1.1" 200 OK
+C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\jwt\api_jwt.py:147: InsecureKeyLengthWarning: The HMAC key is 30 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  return self._jws.encode(
+INFO:     127.0.0.1:50185 - "POST /auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50185 - "OPTIONS /api/dashboard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60691 - "OPTIONS /api/dashboard HTTP/1.1" 200 OK
+C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\jwt\api_jwt.py:368: InsecureKeyLengthWarning: The HMAC key is 30 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:     127.0.0.1:50185 - "GET /api/dashboard HTTP/1.1" 200 OK
+C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\jwt\api_jwt.py:368: InsecureKeyLengthWarning: The HMAC key is 30 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:     127.0.0.1:50185 - "GET /api/dashboard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50185 - "OPTIONS /api/cities HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50185 - "GET /api/cities HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50185 - "OPTIONS /api/trips/3 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60691 - "OPTIONS /api/trips/3/budget HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58149 - "OPTIONS /api/trips/3 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50185 - "OPTIONS /api/trips/3/budget HTTP/1.1" 200 OK
+C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\jwt\api_jwt.py:368: InsecureKeyLengthWarning: The HMAC key is 30 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:     127.0.0.1:50185 - "GET /api/trips/3/budget HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50185 - "GET /api/trips/3/budget HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60691 - "GET /api/trips/3 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60691 - "GET /api/trips/3 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60691 - "GET /api/dashboard HTTP/1.1" 200 OK
+C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\jwt\api_jwt.py:368: InsecureKeyLengthWarning: The HMAC key is 30 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:     127.0.0.1:60691 - "GET /api/dashboard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60691 - "GET /api/cities HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52574 - "OPTIONS /auth/login HTTP/1.1" 200 OK
+C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\jwt\api_jwt.py:147: InsecureKeyLengthWarning: The HMAC key is 30 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  return self._jws.encode(
+INFO:     127.0.0.1:52574 - "POST /auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52574 - "OPTIONS /api/dashboard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57814 - "OPTIONS /api/dashboard HTTP/1.1" 200 OK
+C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\jwt\api_jwt.py:368: InsecureKeyLengthWarning: The HMAC key is 30 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:     127.0.0.1:52574 - "GET /api/dashboard HTTP/1.1" 200 OK
+C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\jwt\api_jwt.py:368: InsecureKeyLengthWarning: The HMAC key is 30 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:     127.0.0.1:52574 - "GET /api/dashboard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52574 - "OPTIONS /api/cities HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52574 - "GET /api/cities HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51011 - "OPTIONS /api/trips/3 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52689 - "OPTIONS /api/trips/3/budget HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54711 - "OPTIONS /api/trips/3/budget HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57064 - "OPTIONS /api/trips/3 HTTP/1.1" 200 OK
+C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\jwt\api_jwt.py:368: InsecureKeyLengthWarning: The HMAC key is 30 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:     127.0.0.1:57064 - "GET /api/trips/3/budget HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54711 - "GET /api/trips/3 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57064 - "GET /api/trips/3/budget HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54711 - "GET /api/trips/3 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64145 - "GET /api/dashboard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64145 - "GET /api/cities HTTP/1.1" 200 OK
+C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\jwt\api_jwt.py:368: InsecureKeyLengthWarning: The HMAC key is 30 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:     127.0.0.1:64145 - "GET /api/dashboard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64145 - "OPTIONS /api/community/experiences?sort_by=recommended HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50011 - "OPTIONS /api/community/experiences?sort_by=recommended HTTP/1.1" 200 OK
+C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\jwt\api_jwt.py:368: InsecureKeyLengthWarning: The HMAC key is 30 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:     127.0.0.1:50011 - "GET /api/community/experiences?sort_by=recommended HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64145 - "GET /api/community/experiences?sort_by=recommended HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64145 - "GET /api/dashboard HTTP/1.1" 200 OK
+C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\jwt\api_jwt.py:368: InsecureKeyLengthWarning: The HMAC key is 30 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:     127.0.0.1:64145 - "GET /api/dashboard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64145 - "GET /api/cities HTTP/1.1" 200 OK
+C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\jwt\api_jwt.py:368: InsecureKeyLengthWarning: The HMAC key is 30 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:     127.0.0.1:64145 - "GET /api/dashboard HTTP/1.1" 200 OK
+C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\jwt\api_jwt.py:368: InsecureKeyLengthWarning: The HMAC key is 30 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:     127.0.0.1:64145 - "GET /api/dashboard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64145 - "GET /api/cities HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64145 - "OPTIONS /auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56346 - "OPTIONS /auth/me HTTP/1.1" 200 OK
+C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\jwt\api_jwt.py:368: InsecureKeyLengthWarning: The HMAC key is 30 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:     127.0.0.1:56346 - "GET /auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64145 - "OPTIONS /api/saved-destinations HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56346 - "GET /auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64145 - "GET /api/saved-destinations HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64145 - "GET /api/saved-destinations HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56346 - "GET /api/cities HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56346 - "GET /api/cities HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54681 - "GET /api/dashboard HTTP/1.1" 200 OK
+C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\jwt\api_jwt.py:368: InsecureKeyLengthWarning: The HMAC key is 30 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:     127.0.0.1:54681 - "GET /api/dashboard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54681 - "GET /api/cities HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54681 - "OPTIONS /api/trips/2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54681 - "OPTIONS /api/trips/2/budget HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54681 - "OPTIONS /api/trips/2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54681 - "OPTIONS /api/trips/2/budget HTTP/1.1" 200 OK
+C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\jwt\api_jwt.py:368: InsecureKeyLengthWarning: The HMAC key is 30 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:     127.0.0.1:54681 - "GET /api/trips/2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54681 - "GET /api/trips/2/budget HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54681 - "GET /api/trips/2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54681 - "GET /api/trips/2/budget HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58062 - "GET /api/dashboard HTTP/1.1" 200 OK
+C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\jwt\api_jwt.py:368: InsecureKeyLengthWarning: The HMAC key is 30 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:     127.0.0.1:58062 - "GET /api/dashboard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58062 - "GET /api/cities HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58062 - "OPTIONS /api/trips/4 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57852 - "OPTIONS /api/trips/4 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65399 - "OPTIONS /api/trips/4/budget HTTP/1.1" 200 OK
+C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\jwt\api_jwt.py:368: InsecureKeyLengthWarning: The HMAC key is 30 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:     127.0.0.1:57852 - "GET /api/trips/4/budget HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65399 - "GET /api/trips/4 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57852 - "GET /api/trips/4/budget HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65399 - "GET /api/trips/4 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65399 - "GET /api/dashboard HTTP/1.1" 200 OK
+C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\jwt\api_jwt.py:368: InsecureKeyLengthWarning: The HMAC key is 30 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:     127.0.0.1:65399 - "GET /api/dashboard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65399 - "GET /api/cities HTTP/1.1" 200 OK
+C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\jwt\api_jwt.py:368: InsecureKeyLengthWarning: The HMAC key is 30 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:     127.0.0.1:56401 - "GET /api/community/experiences?sort_by=recommended HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55791 - "GET /api/community/experiences?sort_by=recommended HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55791 - "GET /api/dashboard HTTP/1.1" 200 OK
+C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\jwt\api_jwt.py:368: InsecureKeyLengthWarning: The HMAC key is 30 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:     127.0.0.1:55791 - "GET /api/dashboard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55791 - "GET /api/cities HTTP/1.1" 200 OK
+C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\jwt\api_jwt.py:368: InsecureKeyLengthWarning: The HMAC key is 30 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:     127.0.0.1:56401 - "GET /api/trips/4/budget HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55791 - "GET /api/trips/4 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55791 - "GET /api/trips/4/budget HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56401 - "GET /api/trips/4 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56401 - "OPTIONS /api/public/trips/c6593229-b0c1-4fed-ae22-3c1982b2fc43 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55791 - "OPTIONS /api/public/trips/c6593229-b0c1-4fed-ae22-3c1982b2fc43 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55791 - "GET /api/public/trips/c6593229-b0c1-4fed-ae22-3c1982b2fc43 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55791 - "GET /api/public/trips/c6593229-b0c1-4fed-ae22-3c1982b2fc43 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55791 - "GET /api/dashboard HTTP/1.1" 200 OK
+C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\jwt\api_jwt.py:368: InsecureKeyLengthWarning: The HMAC key is 30 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:     127.0.0.1:55791 - "GET /api/dashboard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55791 - "GET /api/cities HTTP/1.1" 200 OK
+C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\jwt\api_jwt.py:368: InsecureKeyLengthWarning: The HMAC key is 30 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:     127.0.0.1:55791 - "GET /api/trips/3 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55791 - "GET /api/trips/3/budget HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55791 - "GET /api/trips/3 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55791 - "GET /api/trips/3/budget HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64416 - "OPTIONS /api/recommendations/cities/8 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62454 - "OPTIONS /api/recommendations/cities/8 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62454 - "GET /api/recommendations/cities/8 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62454 - "GET /api/recommendations/cities/8 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63795 - "GET /api/dashboard HTTP/1.1" 200 OK
+C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\jwt\api_jwt.py:368: InsecureKeyLengthWarning: The HMAC key is 30 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:     127.0.0.1:63795 - "GET /api/dashboard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63795 - "GET /api/cities HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60182 - "OPTIONS /api/dashboard HTTP/1.1" 200 OK
+C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\jwt\api_jwt.py:368: InsecureKeyLengthWarning: The HMAC key is 30 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:     127.0.0.1:60182 - "GET /api/dashboard HTTP/1.1" 200 OK
+C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\jwt\api_jwt.py:368: InsecureKeyLengthWarning: The HMAC key is 30 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:     127.0.0.1:55237 - "GET /api/trips/3 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62238 - "GET /api/trips/3/budget HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56969 - "OPTIONS /api/public/trips/c6593229-b0c1-4fed-ae22-3c1982b2fc43 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54704 - "OPTIONS /api/public/trips/c6593229-b0c1-4fed-ae22-3c1982b2fc43 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54704 - "GET /api/public/trips/c6593229-b0c1-4fed-ae22-3c1982b2fc43 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54704 - "GET /api/public/trips/c6593229-b0c1-4fed-ae22-3c1982b2fc43 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56253 - "OPTIONS /auth/login HTTP/1.1" 200 OK
+C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\jwt\api_jwt.py:147: InsecureKeyLengthWarning: The HMAC key is 30 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  return self._jws.encode(
+INFO:     127.0.0.1:56253 - "POST /auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56253 - "OPTIONS /api/dashboard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55463 - "OPTIONS /api/dashboard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55463 - "GET /api/dashboard HTTP/1.1" 200 OK
+C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\jwt\api_jwt.py:368: InsecureKeyLengthWarning: The HMAC key is 30 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:     127.0.0.1:55463 - "GET /api/dashboard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55463 - "OPTIONS /api/cities HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55463 - "GET /api/cities HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52746 - "OPTIONS /api/trips HTTP/1.1" 200 OK
+C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\jwt\api_jwt.py:368: InsecureKeyLengthWarning: The HMAC key is 30 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:     127.0.0.1:52746 - "POST /api/trips HTTP/1.1" 201 Created
+INFO:     127.0.0.1:52746 - "OPTIONS /api/trips/29 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52746 - "OPTIONS /api/trips/29/budget HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52746 - "OPTIONS /api/trips/29 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52746 - "GET /api/trips/29 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52746 - "OPTIONS /api/trips/29/budget HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52746 - "GET /api/trips/29/budget HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52746 - "GET /api/trips/29 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52746 - "GET /api/trips/29/budget HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53447 - "OPTIONS /api/cities?q=M HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53447 - "GET /api/cities?q=M HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53447 - "OPTIONS /api/cities?q=Mum HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53447 - "GET /api/cities?q=Mum HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61296 - "OPTIONS /api/trips/29/stops HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56245 - "POST /api/trips/29/stops HTTP/1.1" 201 Created
+INFO:     127.0.0.1:56245 - "GET /api/trips/29 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61296 - "GET /api/trips/29/budget HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61296 - "OPTIONS /api/recommendations/cities/51?limit=3&interests=Heritage,Nature,Adventure&budget_tier=budget&trip_duration_days=1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56245 - "OPTIONS /api/recommendations/cities/51?limit=3&interests=Heritage,Nature,Adventure&budget_tier=budget&trip_duration_days=1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61296 - "GET /api/recommendations/cities/51?limit=3&interests=Heritage,Nature,Adventure&budget_tier=budget&trip_duration_days=1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61296 - "GET /api/recommendations/cities/51?limit=3&interests=Heritage,Nature,Adventure&budget_tier=budget&trip_duration_days=1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61296 - "GET /api/recommendations/cities/51?limit=3&interests=Heritage,Nature,Adventure&budget_tier=budget&trip_duration_days=1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61296 - "OPTIONS /api/stops/17/activities HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56245 - "POST /api/stops/17/activities HTTP/1.1" 201 Created
+INFO:     127.0.0.1:61296 - "GET /api/trips/29/budget HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56245 - "GET /api/trips/29 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61296 - "OPTIONS /api/recommendations/cities/51?limit=3&interests=Heritage,Nature,Adventure&budget_tier=budget&trip_duration_days=1&exclude_place_names=Gateway+of+India HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56245 - "GET /api/recommendations/cities/51?limit=3&interests=Heritage,Nature,Adventure&budget_tier=budget&trip_duration_days=1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61296 - "GET /api/recommendations/cities/51?limit=3&interests=Heritage,Nature,Adventure&budget_tier=budget&trip_duration_days=1&exclude_place_names=Gateway+of+India HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64293 - "OPTIONS /api/recommendations/budget/multi-city?remaining_budget=20000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59652 - "OPTIONS /api/recommendations/budget/multi-city?remaining_budget=20000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64293 - "POST /api/recommendations/budget/multi-city?remaining_budget=20000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59652 - "POST /api/recommendations/budget/multi-city?remaining_budget=20000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65117 - "GET /api/recommendations/cities/51?limit=3&interests=Heritage,Nature,Adventure&budget_tier=budget&trip_duration_days=1&exclude_place_names=Gateway+of+India HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65117 - "GET /api/recommendations/cities/51?limit=3&interests=Heritage,Nature,Adventure&budget_tier=budget&trip_duration_days=1&exclude_place_names=Gateway+of+India HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65117 - "OPTIONS /auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52448 - "OPTIONS /auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52448 - "GET /auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65117 - "OPTIONS /api/saved-destinations HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52448 - "GET /auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65117 - "GET /api/saved-destinations HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65117 - "GET /api/saved-destinations HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52448 - "GET /api/cities HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52448 - "GET /api/cities HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63116 - "OPTIONS /api/community/experiences?sort_by=recommended HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59286 - "OPTIONS /api/community/experiences?sort_by=recommended HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59286 - "GET /api/community/experiences?sort_by=recommended HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63116 - "GET /api/community/experiences?sort_by=recommended HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63116 - "GET /api/community/experiences?sort_by=recommended HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59286 - "GET /api/community/experiences?sort_by=recommended HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53924 - "GET /auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53924 - "GET /auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53924 - "GET /api/saved-destinations HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53924 - "GET /api/saved-destinations HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53924 - "GET /api/cities HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53924 - "GET /api/cities HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53924 - "GET /api/dashboard HTTP/1.1" 200 OK
+C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\jwt\api_jwt.py:368: InsecureKeyLengthWarning: The HMAC key is 30 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:     127.0.0.1:53924 - "GET /api/dashboard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53924 - "GET /api/cities HTTP/1.1" 200 OK
+C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\jwt\api_jwt.py:368: InsecureKeyLengthWarning: The HMAC key is 30 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:     127.0.0.1:51005 - "GET /api/community/experiences?sort_by=recommended HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51005 - "GET /api/community/experiences?sort_by=recommended HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53921 - "POST /auth/login HTTP/1.1" 403 Forbidden
+C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\jwt\api_jwt.py:147: InsecureKeyLengthWarning: The HMAC key is 30 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  return self._jws.encode(
+INFO:     127.0.0.1:53257 - "POST /auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53257 - "GET /api/dashboard HTTP/1.1" 200 OK
+C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\jwt\api_jwt.py:368: InsecureKeyLengthWarning: The HMAC key is 30 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:     127.0.0.1:53257 - "GET /api/dashboard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53257 - "GET /api/cities HTTP/1.1" 200 OK
+C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\jwt\api_jwt.py:368: InsecureKeyLengthWarning: The HMAC key is 30 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:     127.0.0.1:53257 - "GET /api/dashboard HTTP/1.1" 200 OK
+C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\jwt\api_jwt.py:368: InsecureKeyLengthWarning: The HMAC key is 30 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:     127.0.0.1:53257 - "GET /api/dashboard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53257 - "GET /api/cities HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52714 - "OPTIONS /api/trips/4 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52130 - "OPTIONS /api/trips/4/budget HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51967 - "OPTIONS /api/trips/4 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54642 - "OPTIONS /api/trips/4/budget HTTP/1.1" 200 OK
+C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\jwt\api_jwt.py:368: InsecureKeyLengthWarning: The HMAC key is 30 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:     127.0.0.1:51967 - "GET /api/trips/4 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54642 - "GET /api/trips/4/budget HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51967 - "GET /api/trips/4 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54642 - "GET /api/trips/4/budget HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51585 - "OPTIONS /api/recommendations/cities/51?limit=3&trip_duration_days=1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51585 - "OPTIONS /api/recommendations/cities/51?limit=3&trip_duration_days=1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51585 - "GET /api/recommendations/cities/51?limit=3&trip_duration_days=1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51585 - "GET /api/recommendations/cities/51?limit=3&trip_duration_days=1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51585 - "GET /api/recommendations/cities/51?limit=3&trip_duration_days=1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51585 - "GET /api/recommendations/cities/51?limit=3&trip_duration_days=1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51585 - "GET /api/recommendations/cities/51?limit=3&trip_duration_days=1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51585 - "OPTIONS /api/cities?q=m HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51585 - "GET /api/cities?q=m HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51585 - "GET /api/recommendations/cities/51?limit=3&trip_duration_days=1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51585 - "GET /api/recommendations/cities/51?limit=3&trip_duration_days=1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51585 - "GET /api/recommendations/cities/51?limit=3&trip_duration_days=1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51585 - "GET /api/recommendations/cities/51?limit=3&trip_duration_days=1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51585 - "GET /api/recommendations/cities/51?limit=3&trip_duration_days=1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51585 - "GET /api/recommendations/cities/51?limit=3&trip_duration_days=1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51585 - "OPTIONS /api/cities?q=mumbai HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51585 - "GET /api/cities?q=mumbai HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51585 - "GET /api/recommendations/cities/51?limit=3&trip_duration_days=1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51585 - "GET /api/recommendations/cities/51?limit=3&trip_duration_days=1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51585 - "GET /api/recommendations/cities/51?limit=3&trip_duration_days=1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51585 - "GET /api/recommendations/cities/51?limit=3&trip_duration_days=1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51585 - "GET /api/recommendations/cities/51?limit=3&trip_duration_days=1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51585 - "OPTIONS /api/trips/4/stops HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57740 - "POST /api/trips/4/stops HTTP/1.1" 201 Created
+INFO:     127.0.0.1:57740 - "GET /api/trips/4 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51585 - "GET /api/trips/4/budget HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57740 - "GET /api/recommendations/cities/51?limit=3&trip_duration_days=1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57740 - "GET /api/recommendations/cities/51?limit=3&trip_duration_days=1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57740 - "GET /api/recommendations/cities/51?limit=3&trip_duration_days=1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57740 - "GET /api/recommendations/cities/51?limit=3&trip_duration_days=1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57740 - "GET /api/recommendations/cities/51?limit=3&trip_duration_days=1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57740 - "GET /api/recommendations/cities/51?limit=3&trip_duration_days=1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57740 - "OPTIONS /api/community/experiences?city=Mumbai HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57740 - "GET /api/community/experiences?city=Mumbai HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57740 - "GET /api/community/experiences?city=Mumbai HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57740 - "GET /api/community/experiences?city=Mumbai HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64455 - "OPTIONS /api/trips/4/publish HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64455 - "POST /api/trips/4/publish HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64455 - "GET /api/recommendations/cities/51?limit=3&trip_duration_days=1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64455 - "GET /api/recommendations/cities/51?limit=3&trip_duration_days=1 HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'Datasets\generate.py'. Reloading...
+ INFO:     127.0.0.1:61677 - "GET /api/trips/4/budget HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60434 - "GET /api/trips/4 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61677 - "GET /api/trips/4/budget HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60434 - "GET /api/trips/4 HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [24088]
+WARNING:  WatchFiles detected changes in 'Datasets\gen.py'. Reloading...
+ INFO:     Started server process [9672]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [9672]
+INFO:     Started server process [12040]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     127.0.0.1:50532 - "OPTIONS /api/dashboard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52638 - "OPTIONS /api/cities HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60333 - "OPTIONS /api/dashboard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50532 - "OPTIONS /api/dashboard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52638 - "OPTIONS /api/dashboard HTTP/1.1" 200 OK
+C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\jwt\api_jwt.py:368: InsecureKeyLengthWarning: The HMAC key is 30 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:     127.0.0.1:52638 - "GET /api/dashboard HTTP/1.1" 200 OK
+C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\jwt\api_jwt.py:368: InsecureKeyLengthWarning: The HMAC key is 30 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:     127.0.0.1:52638 - "GET /api/dashboard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52638 - "GET /api/cities HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64969 - "OPTIONS /api/community/experiences?sort_by=recommended HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49267 - "OPTIONS /api/community/experiences?sort_by=recommended HTTP/1.1" 200 OK
+C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\jwt\api_jwt.py:368: InsecureKeyLengthWarning: The HMAC key is 30 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:     127.0.0.1:49267 - "GET /api/community/experiences?sort_by=recommended HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64969 - "GET /api/community/experiences?sort_by=recommended HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64969 - "GET /api/dashboard HTTP/1.1" 200 OK
+C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\jwt\api_jwt.py:368: InsecureKeyLengthWarning: The HMAC key is 30 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:     127.0.0.1:64969 - "GET /api/dashboard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64969 - "GET /api/cities HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'Datasets\wiki_gen.py'. Reloading...
+ INFO:     127.0.0.1:61207 - "OPTIONS /auth/login HTTP/1.1" 200 OK
+C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\jwt\api_jwt.py:147: InsecureKeyLengthWarning: The HMAC key is 30 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  return self._jws.encode(
+INFO:     127.0.0.1:61207 - "POST /auth/login HTTP/1.1" 200 OK
+C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\jwt\api_jwt.py:368: InsecureKeyLengthWarning: The HMAC key is 30 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:     127.0.0.1:61207 - "GET /api/dashboard HTTP/1.1" 200 OK
+C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\jwt\api_jwt.py:368: InsecureKeyLengthWarning: The HMAC key is 30 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:     127.0.0.1:61207 - "GET /api/dashboard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61207 - "GET /api/cities HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63933 - "OPTIONS /auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62085 - "OPTIONS /auth/me HTTP/1.1" 200 OK
+C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\jwt\api_jwt.py:368: InsecureKeyLengthWarning: The HMAC key is 30 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:     127.0.0.1:62085 - "GET /auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63933 - "OPTIONS /api/saved-destinations HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62085 - "GET /auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63933 - "GET /api/saved-destinations HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63933 - "GET /api/saved-destinations HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62085 - "GET /api/cities HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63933 - "GET /api/cities HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [12040]
+INFO:     Started server process [2680]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\jwt\api_jwt.py:368: InsecureKeyLengthWarning: The HMAC key is 30 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:     127.0.0.1:52625 - "GET /api/dashboard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52625 - "GET /api/cities HTTP/1.1" 200 OK
+C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\jwt\api_jwt.py:368: InsecureKeyLengthWarning: The HMAC key is 30 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:     127.0.0.1:52625 - "GET /api/dashboard HTTP/1.1" 200 OK
+C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\jwt\api_jwt.py:368: InsecureKeyLengthWarning: The HMAC key is 30 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:     127.0.0.1:61964 - "GET /api/dashboard HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'Datasets\wiki_gen.py'. Reloading...
+ INFO:     127.0.0.1:56012 - "OPTIONS /api/trips HTTP/1.1" 200 OK
+C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\jwt\api_jwt.py:368: InsecureKeyLengthWarning: The HMAC key is 30 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:     127.0.0.1:57781 - "POST /api/trips HTTP/1.1" 201 Created
+INFO:     127.0.0.1:57781 - "OPTIONS /api/trips/30 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56012 - "OPTIONS /api/trips/30/budget HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57781 - "OPTIONS /api/trips/30 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56012 - "OPTIONS /api/trips/30/budget HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57781 - "GET /api/trips/30 HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     127.0.0.1:56012 - "GET /api/trips/30/budget HTTP/1.1" 200 OK
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [2680]
+INFO:     Started server process [6444]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\jwt\api_jwt.py:368: InsecureKeyLengthWarning: The HMAC key is 30 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:     127.0.0.1:65223 - "GET /api/trips/30 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58131 - "GET /api/trips/30/budget HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52317 - "OPTIONS /api/cities?q=mumbaoi HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52317 - "GET /api/cities?q=mumbaoi HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52317 - "OPTIONS /api/cities?q=mumba HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52317 - "GET /api/cities?q=mumba HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52317 - "OPTIONS /api/cities?q=mumbai HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52317 - "GET /api/cities?q=mumbai HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53311 - "OPTIONS /api/trips/30/stops HTTP/1.1" 200 OK
+C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\jwt\api_jwt.py:368: InsecureKeyLengthWarning: The HMAC key is 30 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:     127.0.0.1:57498 - "POST /api/trips/30/stops HTTP/1.1" 201 Created
+INFO:     127.0.0.1:57498 - "GET /api/trips/30 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53311 - "GET /api/trips/30/budget HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53311 - "OPTIONS /api/recommendations/cities/51?limit=3&interests=Heritage,Nature,Adventure&budget_tier=budget&trip_duration_days=1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57498 - "OPTIONS /api/recommendations/cities/51?limit=3&interests=Heritage,Nature,Adventure&budget_tier=budget&trip_duration_days=1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57498 - "GET /api/recommendations/cities/51?limit=3&interests=Heritage,Nature,Adventure&budget_tier=budget&trip_duration_days=1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57498 - "GET /api/recommendations/cities/51?limit=3&interests=Heritage,Nature,Adventure&budget_tier=budget&trip_duration_days=1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57498 - "GET /api/recommendations/cities/51?limit=3&interests=Heritage,Nature,Adventure&budget_tier=budget&trip_duration_days=1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60956 - "OPTIONS /api/recommendations/budget/multi-city?remaining_budget=50000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60956 - "OPTIONS /api/recommendations/budget/multi-city?remaining_budget=50000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60956 - "POST /api/recommendations/budget/multi-city?remaining_budget=50000 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60956 - "POST /api/recommendations/budget/multi-city?remaining_budget=50000 HTTP/1.1" 200 OK
+C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\jwt\api_jwt.py:368: InsecureKeyLengthWarning: The HMAC key is 30 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:     127.0.0.1:52385 - "GET /api/dashboard HTTP/1.1" 200 OK
+C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\jwt\api_jwt.py:368: InsecureKeyLengthWarning: The HMAC key is 30 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:     127.0.0.1:52385 - "GET /api/dashboard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52385 - "GET /api/cities HTTP/1.1" 200 OK
+C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\jwt\api_jwt.py:368: InsecureKeyLengthWarning: The HMAC key is 30 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:     127.0.0.1:56677 - "GET /api/community/experiences?sort_by=recommended HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59416 - "GET /api/community/experiences?sort_by=recommended HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49795 - "GET /api/dashboard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49795 - "GET /api/cities HTTP/1.1" 200 OK
+C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\jwt\api_jwt.py:368: InsecureKeyLengthWarning: The HMAC key is 30 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:     127.0.0.1:49795 - "GET /api/dashboard HTTP/1.1" 200 OK
+C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\jwt\api_jwt.py:368: InsecureKeyLengthWarning: The HMAC key is 30 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:     127.0.0.1:49795 - "GET /api/community/experiences?sort_by=recommended HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63247 - "GET /api/community/experiences?sort_by=recommended HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63247 - "GET /api/dashboard HTTP/1.1" 200 OK
+C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\jwt\api_jwt.py:368: InsecureKeyLengthWarning: The HMAC key is 30 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:     127.0.0.1:63247 - "GET /api/dashboard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63247 - "GET /api/cities HTTP/1.1" 200 OK
+C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\jwt\api_jwt.py:368: InsecureKeyLengthWarning: The HMAC key is 30 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:     127.0.0.1:63247 - "GET /auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63247 - "GET /auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49795 - "GET /api/saved-destinations HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49795 - "GET /api/saved-destinations HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63247 - "GET /api/cities HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63247 - "GET /api/cities HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63763 - "GET /api/dashboard HTTP/1.1" 200 OK
+C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\jwt\api_jwt.py:368: InsecureKeyLengthWarning: The HMAC key is 30 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:     127.0.0.1:63763 - "GET /api/dashboard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63763 - "GET /api/cities HTTP/1.1" 200 OK
+C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\jwt\api_jwt.py:368: InsecureKeyLengthWarning: The HMAC key is 30 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:     127.0.0.1:53546 - "GET /api/dashboard HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'app\api\endpoints\dashboard.py'. Reloading...
+ INFO:     127.0.0.1:56016 - "OPTIONS /auth/register HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56016 - "POST /auth/register HTTP/1.1" 409 Conflict
+send: 'ehlo Sujal.hgu_lan\r\n'
+reply: b'250-smtp.gmail.com at your service, [103.110.254.102]\r\n'
+reply: b'250-SIZE 35882577\r\n'
+reply: b'250-8BITMIME\r\n'
+reply: b'250-STARTTLS\r\n'
+reply: b'250-ENHANCEDSTATUSCODES\r\n'
+reply: b'250-PIPELINING\r\n'
+reply: b'250-CHUNKING\r\n'
+reply: b'250 SMTPUTF8\r\n'
+reply: retcode (250); Msg: b'smtp.gmail.com at your service, [103.110.254.102]\nSIZE 35882577\n8BITMIME\nSTARTTLS\nENHANCEDSTATUSCODES\nPIPELINING\nCHUNKING\nSMTPUTF8'
+send: 'STARTTLS\r\n'
+reply: b'220 2.0.0 Ready to start TLS\r\n'
+reply: retcode (220); Msg: b'2.0.0 Ready to start TLS'
+send: 'ehlo Sujal.hgu_lan\r\n'
+reply: b'250-smtp.gmail.com at your service, [103.110.254.102]\r\n'
+reply: b'250-SIZE 35882577\r\n'
+reply: b'250-8BITMIME\r\n'
+reply: b'250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH\r\n'
+reply: b'250-ENHANCEDSTATUSCODES\r\n'
+reply: b'250-PIPELINING\r\n'
+reply: b'250-CHUNKING\r\n'
+reply: b'250 SMTPUTF8\r\n'
+reply: retcode (250); Msg: b'smtp.gmail.com at your service, [103.110.254.102]\nSIZE 35882577\n8BITMIME\nAUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH\nENHANCEDSTATUSCODES\nPIPELINING\nCHUNKING\nSMTPUTF8'
+send: 'AUTH PLAIN AHN1amFsYnBhdGlsMjFAZ21haWwuY29tAGdyZ21vdmxxaHFwbXVmdW8=\r\n'
+reply: b'235 2.7.0 Accepted\r\n'
+reply: retcode (235); Msg: b'2.7.0 Accepted'
+send: 'mail from:<sujalbpatil21@gmail.com> size=1846\r\n'
+reply: b'250 2.1.0 OK 5a478bee46e88-327f90999fcsm5002858eec.1 - gsmtp\r\n'
+reply: retcode (250); Msg: b'2.1.0 OK 5a478bee46e88-327f90999fcsm5002858eec.1 - gsmtp'
+send: 'rcpt to:<nihalcr72020@gmail.com>\r\n'
+reply: b'250 2.1.5 OK 5a478bee46e88-327f90999fcsm5002858eec.1 - gsmtp\r\n'
+reply: retcode (250); Msg: b'2.1.5 OK 5a478bee46e88-327f90999fcsm5002858eec.1 - gsmtp'
+send: 'data\r\n'
+reply: b'354 Go ahead 5a478bee46e88-327f90999fcsm5002858eec.1 - gsmtp\r\n'
+reply: retcode (354); Msg: b'Go ahead 5a478bee46e88-327f90999fcsm5002858eec.1 - gsmtp'
+data: (354, b'Go ahead 5a478bee46e88-327f90999fcsm5002858eec.1 - gsmtp')
+send: b'Content-Type: multipart/alternative; boundary="===============5020471537971212031=="\r\nMIME-Version: 1.0\r\nSubject: [Auth Service] Verify Your Email Address\r\nFrom: sujalbpatil21@gmail.com\r\nTo: nihalcr72020@gmail.com\r\n\r\n--===============5020471537971212031==\r\nContent-Type: text/html; charset="us-ascii"\r\nMIME-Version: 1.0\r\nContent-Transfer-Encoding: 7bit\r\n\r\n<!DOCTYPE html>\r\n<html>\r\n<head>\r\n    <meta charset="utf-8">\r\n    <title>Verify Your Email</title>\r\n</head>\r\n<body style="font-family: Arial, sans-serif; background-color: #f4f4f5; padding: 20px;">\r\n    <div style="max-width: 600px; margin: 0 auto; background-color: #ffffff; padding: 30px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">\r\n        <h2 style="color: #1e293b; text-align: center;">Welcome to Auth Service!</h2>\r\n        <p style="color: #475569; font-size: 16px;">Hi tejas121,</p>\r\n        <p style="color: #475569; font-size: 16px;">Thank you for registering. Please use the verification code below to activate your account:</p>\r\n        \r\n        <div style="text-align: center; margin: 30px 0;">\r\n            <span style="display: inline-block; background-color: #e0e7ff; color: #4f46e5; font-size: 32px; font-weight: bold; letter-spacing: 5px; padding: 15px 30px; border-radius: 8px;">\r\n                626006\r\n            </span>\r\n        </div>\r\n        \r\n        <p style="color: #475569; font-size: 16px;">This code will expire in 5 minutes.</p>\r\n        <p style="color: #475569; font-size: 16px;">If you didn\'t request this, you can safely ignore this email.</p>\r\n        \r\n        <hr style="border: none; border-top: 1px solid #e2e8f0; margin: 30px 0;">\r\n        <p style="color: #94a3b8; font-size: 12px; text-align: center;">&copy; 2026 Auth Service. All rights reserved.</p>\r\n    </div>\r\n</body>\r\n</html>\r\n--===============5020471537971212031==--\r\n.\r\n'
+reply: b'250 2.0.0 OK  1787392913 5a478bee46e88-327f90999fcsm5002858eec.1 - gsmtp\r\n'
+reply: retcode (250); Msg: b'2.0.0 OK  1787392913 5a478bee46e88-327f90999fcsm5002858eec.1 - gsmtp'
+data: (250, b'2.0.0 OK  1787392913 5a478bee46e88-327f90999fcsm5002858eec.1 - gsmtp')
+send: 'QUIT\r\n'
+reply: b'221 2.0.0 closing connection 5a478bee46e88-327f90999fcsm5002858eec.1 - gsmtp\r\n'
+reply: retcode (221); Msg: b'2.0.0 closing connection 5a478bee46e88-327f90999fcsm5002858eec.1 - gsmtp'
+INFO:     127.0.0.1:56016 - "POST /auth/register HTTP/1.1" 201 Created
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [6444]
+INFO:     Started server process [20236]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+send: 'ehlo Sujal.hgu_lan\r\n'
+reply: b'250-smtp.gmail.com at your service, [103.110.254.102]\r\n'
+reply: b'250-SIZE 35882577\r\n'
+reply: b'250-8BITMIME\r\n'
+reply: b'250-STARTTLS\r\n'
+reply: b'250-ENHANCEDSTATUSCODES\r\n'
+reply: b'250-PIPELINING\r\n'
+reply: b'250-CHUNKING\r\n'
+reply: b'250 SMTPUTF8\r\n'
+reply: retcode (250); Msg: b'smtp.gmail.com at your service, [103.110.254.102]\nSIZE 35882577\n8BITMIME\nSTARTTLS\nENHANCEDSTATUSCODES\nPIPELINING\nCHUNKING\nSMTPUTF8'
+send: 'STARTTLS\r\n'
+reply: b'220 2.0.0 Ready to start TLS\r\n'
+reply: retcode (220); Msg: b'2.0.0 Ready to start TLS'
+send: 'ehlo Sujal.hgu_lan\r\n'
+reply: b'250-smtp.gmail.com at your service, [103.110.254.102]\r\n'
+reply: b'250-SIZE 35882577\r\n'
+reply: b'250-8BITMIME\r\n'
+reply: b'250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH\r\n'
+reply: b'250-ENHANCEDSTATUSCODES\r\n'
+reply: b'250-PIPELINING\r\n'
+reply: b'250-CHUNKING\r\n'
+reply: b'250 SMTPUTF8\r\n'
+reply: retcode (250); Msg: b'smtp.gmail.com at your service, [103.110.254.102]\nSIZE 35882577\n8BITMIME\nAUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH\nENHANCEDSTATUSCODES\nPIPELINING\nCHUNKING\nSMTPUTF8'
+send: 'AUTH PLAIN AHN1amFsYnBhdGlsMjFAZ21haWwuY29tAGdyZ21vdmxxaHFwbXVmdW8=\r\n'
+reply: b'235 2.7.0 Accepted\r\n'
+reply: retcode (235); Msg: b'2.7.0 Accepted'
+send: 'mail from:<sujalbpatil21@gmail.com> size=1846\r\n'
+reply: b'250 2.1.0 OK a92af1059eb24-141860ef75esm6411891c88.7 - gsmtp\r\n'
+reply: retcode (250); Msg: b'2.1.0 OK a92af1059eb24-141860ef75esm6411891c88.7 - gsmtp'
+send: 'rcpt to:<nihalcr72020@gmail.com>\r\n'
+reply: b'250 2.1.5 OK a92af1059eb24-141860ef75esm6411891c88.7 - gsmtp\r\n'
+reply: retcode (250); Msg: b'2.1.5 OK a92af1059eb24-141860ef75esm6411891c88.7 - gsmtp'
+send: 'data\r\n'
+reply: b'354 Go ahead a92af1059eb24-141860ef75esm6411891c88.7 - gsmtp\r\n'
+reply: retcode (354); Msg: b'Go ahead a92af1059eb24-141860ef75esm6411891c88.7 - gsmtp'
+data: (354, b'Go ahead a92af1059eb24-141860ef75esm6411891c88.7 - gsmtp')
+send: b'Content-Type: multipart/alternative; boundary="===============8731335945455027186=="\r\nMIME-Version: 1.0\r\nSubject: [Auth Service] Verify Your Email Address\r\nFrom: sujalbpatil21@gmail.com\r\nTo: nihalcr72020@gmail.com\r\n\r\n--===============8731335945455027186==\r\nContent-Type: text/html; charset="us-ascii"\r\nMIME-Version: 1.0\r\nContent-Transfer-Encoding: 7bit\r\n\r\n<!DOCTYPE html>\r\n<html>\r\n<head>\r\n    <meta charset="utf-8">\r\n    <title>Verify Your Email</title>\r\n</head>\r\n<body style="font-family: Arial, sans-serif; background-color: #f4f4f5; padding: 20px;">\r\n    <div style="max-width: 600px; margin: 0 auto; background-color: #ffffff; padding: 30px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">\r\n        <h2 style="color: #1e293b; text-align: center;">Welcome to Auth Service!</h2>\r\n        <p style="color: #475569; font-size: 16px;">Hi tejas121,</p>\r\n        <p style="color: #475569; font-size: 16px;">Thank you for registering. Please use the verification code below to activate your account:</p>\r\n        \r\n        <div style="text-align: center; margin: 30px 0;">\r\n            <span style="display: inline-block; background-color: #e0e7ff; color: #4f46e5; font-size: 32px; font-weight: bold; letter-spacing: 5px; padding: 15px 30px; border-radius: 8px;">\r\n                369960\r\n            </span>\r\n        </div>\r\n        \r\n        <p style="color: #475569; font-size: 16px;">This code will expire in 5 minutes.</p>\r\n        <p style="color: #475569; font-size: 16px;">If you didn\'t request this, you can safely ignore this email.</p>\r\n        \r\n        <hr style="border: none; border-top: 1px solid #e2e8f0; margin: 30px 0;">\r\n        <p style="color: #94a3b8; font-size: 12px; text-align: center;">&copy; 2026 Auth Service. All rights reserved.</p>\r\n    </div>\r\n</body>\r\n</html>\r\n--===============8731335945455027186==--\r\n.\r\n'
+reply: b'250 2.0.0 OK  1787393152 a92af1059eb24-141860ef75esm6411891c88.7 - gsmtp\r\n'
+reply: retcode (250); Msg: b'2.0.0 OK  1787393152 a92af1059eb24-141860ef75esm6411891c88.7 - gsmtp'
+data: (250, b'2.0.0 OK  1787393152 a92af1059eb24-141860ef75esm6411891c88.7 - gsmtp')
+send: 'QUIT\r\n'
+reply: b'221 2.0.0 closing connection a92af1059eb24-141860ef75esm6411891c88.7 - gsmtp\r\n'
+reply: retcode (221); Msg: b'2.0.0 closing connection a92af1059eb24-141860ef75esm6411891c88.7 - gsmtp'
+INFO:     127.0.0.1:49919 - "POST /auth/register HTTP/1.1" 201 Created
+INFO:     127.0.0.1:64764 - "OPTIONS /auth/verify-otp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64764 - "POST /auth/verify-otp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62892 - "OPTIONS /auth/login HTTP/1.1" 200 OK
+C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\jwt\api_jwt.py:147: InsecureKeyLengthWarning: The HMAC key is 30 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  return self._jws.encode(
+INFO:     127.0.0.1:62892 - "POST /auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62892 - "OPTIONS /api/dashboard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55873 - "OPTIONS /api/dashboard HTTP/1.1" 200 OK
+C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\jwt\api_jwt.py:368: InsecureKeyLengthWarning: The HMAC key is 30 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:     127.0.0.1:55873 - "GET /api/dashboard HTTP/1.1" 200 OK
+C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\jwt\api_jwt.py:368: InsecureKeyLengthWarning: The HMAC key is 30 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:     127.0.0.1:55873 - "GET /api/dashboard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55873 - "OPTIONS /api/cities HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55873 - "GET /api/cities HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53289 - "POST /auth/login HTTP/1.1" 401 Unauthorized
+C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\jwt\api_jwt.py:147: InsecureKeyLengthWarning: The HMAC key is 30 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  return self._jws.encode(
+INFO:     127.0.0.1:57066 - "POST /auth/login HTTP/1.1" 200 OK
+C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\jwt\api_jwt.py:368: InsecureKeyLengthWarning: The HMAC key is 30 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:     127.0.0.1:57066 - "GET /api/dashboard HTTP/1.1" 200 OK
+C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\jwt\api_jwt.py:368: InsecureKeyLengthWarning: The HMAC key is 30 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:     127.0.0.1:57066 - "GET /api/dashboard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57066 - "GET /api/cities HTTP/1.1" 200 OK
+C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\jwt\api_jwt.py:368: InsecureKeyLengthWarning: The HMAC key is 30 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:     127.0.0.1:49859 - "GET /api/dashboard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49859 - "GET /api/cities HTTP/1.1" 200 OK
+C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\jwt\api_jwt.py:368: InsecureKeyLengthWarning: The HMAC key is 30 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:     127.0.0.1:49859 - "GET /api/dashboard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53394 - "OPTIONS /api/community/experiences?sort_by=recommended HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59579 - "OPTIONS /api/community/experiences?sort_by=recommended HTTP/1.1" 200 OK
+C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\jwt\api_jwt.py:368: InsecureKeyLengthWarning: The HMAC key is 30 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:     127.0.0.1:59579 - "GET /api/community/experiences?sort_by=recommended HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53394 - "GET /api/community/experiences?sort_by=recommended HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53394 - "GET /api/dashboard HTTP/1.1" 200 OK
+C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\jwt\api_jwt.py:368: InsecureKeyLengthWarning: The HMAC key is 30 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:     127.0.0.1:53394 - "GET /api/dashboard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53394 - "GET /api/cities HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53394 - "OPTIONS /api/trips/2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59579 - "OPTIONS /api/trips/2/budget HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59538 - "OPTIONS /api/trips/2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53394 - "OPTIONS /api/trips/2/budget HTTP/1.1" 200 OK
+C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\jwt\api_jwt.py:368: InsecureKeyLengthWarning: The HMAC key is 30 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:     127.0.0.1:59538 - "GET /api/trips/2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59538 - "GET /api/trips/2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59579 - "GET /api/trips/2/budget HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59579 - "GET /api/trips/2/budget HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49949 - "OPTIONS /api/cities?q=m HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49949 - "GET /api/cities?q=m HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49949 - "OPTIONS /api/cities?q=mumbai HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49949 - "GET /api/cities?q=mumbai HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49949 - "OPTIONS /api/trips/2/stops HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49949 - "POST /api/trips/2/stops HTTP/1.1" 201 Created
+INFO:     127.0.0.1:49949 - "GET /api/trips/2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49949 - "GET /api/trips/2/budget HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49949 - "OPTIONS /api/recommendations/cities/51?limit=3&trip_duration_days=1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49949 - "OPTIONS /api/recommendations/cities/51?limit=3&trip_duration_days=1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49949 - "GET /api/recommendations/cities/51?limit=3&trip_duration_days=1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49949 - "GET /api/recommendations/cities/51?limit=3&trip_duration_days=1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49949 - "GET /api/recommendations/cities/51?limit=3&trip_duration_days=1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49949 - "GET /api/dashboard HTTP/1.1" 200 OK
+C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\jwt\api_jwt.py:368: InsecureKeyLengthWarning: The HMAC key is 30 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:     127.0.0.1:49949 - "GET /api/dashboard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49949 - "GET /api/cities HTTP/1.1" 200 OK
+C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\jwt\api_jwt.py:368: InsecureKeyLengthWarning: The HMAC key is 30 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:     127.0.0.1:56743 - "GET /api/dashboard HTTP/1.1" 200 OK
+C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\jwt\api_jwt.py:368: InsecureKeyLengthWarning: The HMAC key is 30 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:     127.0.0.1:57333 - "GET /api/dashboard HTTP/1.1" 200 OK
+C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\jwt\api_jwt.py:368: InsecureKeyLengthWarning: The HMAC key is 30 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:     127.0.0.1:57333 - "GET /api/dashboard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57333 - "GET /api/cities HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56370 - "OPTIONS /api/dashboard HTTP/1.1" 200 OK
+C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\jwt\api_jwt.py:368: InsecureKeyLengthWarning: The HMAC key is 30 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:     127.0.0.1:56370 - "GET /api/dashboard HTTP/1.1" 200 OK
+C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\jwt\api_jwt.py:368: InsecureKeyLengthWarning: The HMAC key is 30 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:     127.0.0.1:63196 - "GET /api/dashboard HTTP/1.1" 200 OK
+C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\jwt\api_jwt.py:368: InsecureKeyLengthWarning: The HMAC key is 30 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:     127.0.0.1:63196 - "GET /api/dashboard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63196 - "OPTIONS /api/cities HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63196 - "GET /api/cities HTTP/1.1" 200 OK
+C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\jwt\api_jwt.py:368: InsecureKeyLengthWarning: The HMAC key is 30 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:     127.0.0.1:61178 - "GET /api/dashboard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61178 - "GET /api/cities HTTP/1.1" 200 OK
+C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\jwt\api_jwt.py:368: InsecureKeyLengthWarning: The HMAC key is 30 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:     127.0.0.1:61178 - "GET /api/dashboard HTTP/1.1" 200 OK
+C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\jwt\api_jwt.py:368: InsecureKeyLengthWarning: The HMAC key is 30 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:     127.0.0.1:52468 - "GET /api/dashboard HTTP/1.1" 200 OK
+C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\jwt\api_jwt.py:368: InsecureKeyLengthWarning: The HMAC key is 30 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:     127.0.0.1:52468 - "GET /api/dashboard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52468 - "GET /api/cities HTTP/1.1" 200 OK
+C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\jwt\api_jwt.py:368: InsecureKeyLengthWarning: The HMAC key is 30 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:     127.0.0.1:55323 - "GET /api/dashboard HTTP/1.1" 200 OK
+C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\jwt\api_jwt.py:368: InsecureKeyLengthWarning: The HMAC key is 30 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:     127.0.0.1:55323 - "GET /api/dashboard HTTP/1.1" 200 OK
+C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\jwt\api_jwt.py:368: InsecureKeyLengthWarning: The HMAC key is 30 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:     127.0.0.1:55323 - "GET /api/dashboard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55323 - "GET /api/cities HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'app\api\endpoints\community.py'. Reloading...
+ C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\jwt\api_jwt.py:368: InsecureKeyLengthWarning: The HMAC key is 30 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:     127.0.0.1:52916 - "GET /api/dashboard HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [20236]
+WARNING:  WatchFiles detected changes in 'app\schemas\community.py', 'app\api\endpoints\community.py'. Reloading...
+ INFO:     Started server process [14072]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [14072]
+WARNING:  WatchFiles detected changes in 'app\api\endpoints\community.py'. Reloading...
+ INFO:     Started server process [26448]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [26448]
+INFO:     Started server process [4696]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     127.0.0.1:57721 - "OPTIONS /api/dashboard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56818 - "OPTIONS /api/dashboard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57721 - "OPTIONS /api/cities HTTP/1.1" 200 OK
+C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\jwt\api_jwt.py:368: InsecureKeyLengthWarning: The HMAC key is 30 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:     127.0.0.1:57721 - "GET /api/cities HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56818 - "GET /api/dashboard HTTP/1.1" 200 OK
+C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\jwt\api_jwt.py:368: InsecureKeyLengthWarning: The HMAC key is 30 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:     127.0.0.1:56818 - "GET /api/dashboard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61943 - "OPTIONS /api/community/experiences?sort_by=recommended HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55180 - "OPTIONS /api/community/experiences?sort_by=recommended HTTP/1.1" 200 OK
+C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\jwt\api_jwt.py:368: InsecureKeyLengthWarning: The HMAC key is 30 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:     127.0.0.1:55180 - "GET /api/community/experiences?sort_by=recommended HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61943 - "GET /api/community/experiences?sort_by=recommended HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51008 - "GET /api/dashboard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51008 - "GET /api/cities HTTP/1.1" 200 OK
+C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\jwt\api_jwt.py:368: InsecureKeyLengthWarning: The HMAC key is 30 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:     127.0.0.1:51008 - "GET /api/dashboard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51008 - "OPTIONS /api/trips/2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57644 - "OPTIONS /api/trips/2/budget HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58150 - "OPTIONS /api/trips/2/budget HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53774 - "OPTIONS /api/trips/2 HTTP/1.1" 200 OK
+C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\jwt\api_jwt.py:368: InsecureKeyLengthWarning: The HMAC key is 30 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:     127.0.0.1:53774 - "GET /api/trips/2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58150 - "GET /api/trips/2/budget HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53774 - "GET /api/trips/2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58150 - "GET /api/trips/2/budget HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58150 - "GET /api/trips/2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53774 - "GET /api/trips/2/budget HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53774 - "GET /api/trips/2/budget HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58150 - "GET /api/trips/2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58150 - "OPTIONS /api/trips/2/publish HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53774 - "POST /api/trips/2/publish HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53774 - "GET /api/community/experiences?sort_by=recommended HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58150 - "GET /api/community/experiences?sort_by=recommended HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63938 - "OPTIONS /api/community/experiences?sort_by=recent HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63938 - "GET /api/community/experiences?sort_by=recent HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63938 - "OPTIONS /api/community/experiences/22 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51008 - "OPTIONS /api/community/experiences/22 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51008 - "GET /api/community/experiences/22 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51008 - "GET /api/community/experiences/22 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51008 - "OPTIONS /api/community/experiences/22/like HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63938 - "POST /api/community/experiences/22/like HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63938 - "OPTIONS /api/community/users/Tejas HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51008 - "OPTIONS /api/community/users/Tejas HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63938 - "GET /api/community/users/Tejas HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\uvicorn\protocols\http\httptools_impl.py", line 422, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        self.scope, self.receive, self.send
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\uvicorn\middleware\proxy_headers.py", line 63, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\applications.py", line 1163, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\applications.py", line 90, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\middleware\errors.py", line 186, in __call__
+    raise exc
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\middleware\cors.py", line 96, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\middleware\cors.py", line 154, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\routing.py", line 2683, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\routing.py", line 1753, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\routing.py", line 2738, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\routing.py", line 1773, in _handle_selected
+    await original_route.handle(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\routing.py", line 1264, in handle
+    await app(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\routing.py", line 150, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\routing.py", line 136, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\routing.py", line 690, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\routing.py", line 346, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\concurrency.py", line 34, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\anyio\to_thread.py", line 63, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\anyio\_backends\_asyncio.py", line 2596, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\anyio\_backends\_asyncio.py", line 1029, in run
+    result = context.run(func, *args)
+  File "C:\odooo111\GlobeTrotter\backend\app\api\endpoints\community.py", line 27, in get_public_profile
+    .filter(CommunityExperience.publisher_id == user.id, CommunityExperience.is_published == True)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: type object 'CommunityExperience' has no attribute 'publisher_id'. Did you mean: 'published_at'?
+INFO:     127.0.0.1:51008 - "GET /api/community/users/Tejas HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\uvicorn\protocols\http\httptools_impl.py", line 422, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        self.scope, self.receive, self.send
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\uvicorn\middleware\proxy_headers.py", line 63, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\applications.py", line 1163, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\applications.py", line 90, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\middleware\errors.py", line 186, in __call__
+    raise exc
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\middleware\cors.py", line 96, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\middleware\cors.py", line 154, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\routing.py", line 2683, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\routing.py", line 1753, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\routing.py", line 2738, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\routing.py", line 1773, in _handle_selected
+    await original_route.handle(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\routing.py", line 1264, in handle
+    await app(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\routing.py", line 150, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\routing.py", line 136, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\routing.py", line 690, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\routing.py", line 346, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\concurrency.py", line 34, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\anyio\to_thread.py", line 63, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\anyio\_backends\_asyncio.py", line 2596, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\anyio\_backends\_asyncio.py", line 1029, in run
+    result = context.run(func, *args)
+  File "C:\odooo111\GlobeTrotter\backend\app\api\endpoints\community.py", line 27, in get_public_profile
+    .filter(CommunityExperience.publisher_id == user.id, CommunityExperience.is_published == True)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: type object 'CommunityExperience' has no attribute 'publisher_id'. Did you mean: 'published_at'?
+INFO:     127.0.0.1:50239 - "GET /api/community/experiences?sort_by=recommended HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50239 - "GET /api/community/experiences?sort_by=recommended HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50239 - "OPTIONS /auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63010 - "OPTIONS /auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63010 - "GET /auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50239 - "OPTIONS /api/saved-destinations HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63010 - "GET /auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50239 - "GET /api/saved-destinations HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63010 - "GET /api/cities HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50239 - "GET /api/saved-destinations HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63010 - "GET /api/cities HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53050 - "OPTIONS /auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53050 - "PUT /auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53050 - "GET /api/dashboard HTTP/1.1" 200 OK
+C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\jwt\api_jwt.py:368: InsecureKeyLengthWarning: The HMAC key is 30 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:     127.0.0.1:53050 - "GET /api/dashboard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53050 - "GET /api/cities HTTP/1.1" 200 OK
+C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\jwt\api_jwt.py:368: InsecureKeyLengthWarning: The HMAC key is 30 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:     127.0.0.1:53050 - "GET /api/trips/2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53050 - "GET /api/trips/2/budget HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53050 - "GET /api/trips/2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53050 - "GET /api/trips/2/budget HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53050 - "GET /api/community/experiences?sort_by=recommended HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63176 - "GET /api/community/experiences?sort_by=recommended HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63176 - "GET /api/community/experiences?sort_by=recent HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63176 - "GET /api/community/experiences/22 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63176 - "GET /api/community/experiences/22 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63176 - "GET /api/community/users/Tejas HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\uvicorn\protocols\http\httptools_impl.py", line 422, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        self.scope, self.receive, self.send
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\uvicorn\middleware\proxy_headers.py", line 63, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\applications.py", line 1163, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\applications.py", line 90, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\middleware\errors.py", line 186, in __call__
+    raise exc
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\middleware\cors.py", line 96, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\middleware\cors.py", line 154, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\routing.py", line 2683, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\routing.py", line 1753, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\routing.py", line 2738, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\routing.py", line 1773, in _handle_selected
+    await original_route.handle(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\routing.py", line 1264, in handle
+    await app(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\routing.py", line 150, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\routing.py", line 136, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\routing.py", line 690, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\routing.py", line 346, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\concurrency.py", line 34, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\anyio\to_thread.py", line 63, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\anyio\_backends\_asyncio.py", line 2596, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\anyio\_backends\_asyncio.py", line 1029, in run
+    result = context.run(func, *args)
+  File "C:\odooo111\GlobeTrotter\backend\app\api\endpoints\community.py", line 27, in get_public_profile
+    .filter(CommunityExperience.publisher_id == user.id, CommunityExperience.is_published == True)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: type object 'CommunityExperience' has no attribute 'publisher_id'. Did you mean: 'published_at'?
+INFO:     127.0.0.1:61764 - "GET /api/community/users/Tejas HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\uvicorn\protocols\http\httptools_impl.py", line 422, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        self.scope, self.receive, self.send
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\uvicorn\middleware\proxy_headers.py", line 63, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\applications.py", line 1163, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\applications.py", line 90, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\middleware\errors.py", line 186, in __call__
+    raise exc
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\middleware\cors.py", line 96, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\middleware\cors.py", line 154, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\routing.py", line 2683, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\routing.py", line 1753, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\routing.py", line 2738, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\routing.py", line 1773, in _handle_selected
+    await original_route.handle(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\routing.py", line 1264, in handle
+    await app(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\routing.py", line 150, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\routing.py", line 136, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\routing.py", line 690, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\routing.py", line 346, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\concurrency.py", line 34, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\anyio\to_thread.py", line 63, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\anyio\_backends\_asyncio.py", line 2596, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\anyio\_backends\_asyncio.py", line 1029, in run
+    result = context.run(func, *args)
+  File "C:\odooo111\GlobeTrotter\backend\app\api\endpoints\community.py", line 27, in get_public_profile
+    .filter(CommunityExperience.publisher_id == user.id, CommunityExperience.is_published == True)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: type object 'CommunityExperience' has no attribute 'publisher_id'. Did you mean: 'published_at'?
+WARNING:  WatchFiles detected changes in 'app\api\endpoints\users.py'. Reloading...
+ INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [4696]
+INFO:     Started server process [13988]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app\main.py'. Reloading...
+ INFO:     Shutting down
+C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\jwt\api_jwt.py:368: InsecureKeyLengthWarning: The HMAC key is 30 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:     Waiting for connections to close. (CTRL+C to force quit)
+INFO:     127.0.0.1:58330 - "GET /api/community/experiences/22 HTTP/1.1" 200 OK
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [13988]
+INFO:     Started server process [20348]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\jwt\api_jwt.py:368: InsecureKeyLengthWarning: The HMAC key is 30 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:     127.0.0.1:62095 - "GET /api/community/experiences/22 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64821 - "GET /api/community/experiences?sort_by=recommended HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62095 - "GET /api/community/experiences?sort_by=recommended HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53933 - "GET /api/community/experiences?sort_by=recent HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53933 - "GET /api/community/experiences/22 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53933 - "GET /api/community/experiences/22 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53933 - "OPTIONS /api/users/Tejas HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54511 - "OPTIONS /api/users/Tejas HTTP/1.1" 200 OK
+C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\jwt\api_jwt.py:368: InsecureKeyLengthWarning: The HMAC key is 30 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:     127.0.0.1:53933 - "GET /api/users/Tejas HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\uvicorn\protocols\http\httptools_impl.py", line 422, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        self.scope, self.receive, self.send
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\uvicorn\middleware\proxy_headers.py", line 63, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\applications.py", line 1163, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\applications.py", line 90, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\middleware\errors.py", line 186, in __call__
+    raise exc
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\middleware\cors.py", line 96, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\middleware\cors.py", line 154, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\routing.py", line 2683, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\routing.py", line 1753, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\routing.py", line 2738, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\routing.py", line 1773, in _handle_selected
+    await original_route.handle(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\routing.py", line 1264, in handle
+    await app(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\routing.py", line 150, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\routing.py", line 136, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\routing.py", line 690, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\routing.py", line 346, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\concurrency.py", line 34, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\anyio\to_thread.py", line 63, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\anyio\_backends\_asyncio.py", line 2596, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\anyio\_backends\_asyncio.py", line 1029, in run
+    result = context.run(func, *args)
+  File "C:\odooo111\GlobeTrotter\backend\app\api\endpoints\users.py", line 24, in get_public_profile
+    .filter(CommunityExperience.publisher_id == user.id, CommunityExperience.is_published == True)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: type object 'CommunityExperience' has no attribute 'publisher_id'. Did you mean: 'published_at'?
+INFO:     127.0.0.1:54511 - "GET /api/users/Tejas HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\uvicorn\protocols\http\httptools_impl.py", line 422, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        self.scope, self.receive, self.send
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\uvicorn\middleware\proxy_headers.py", line 63, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\applications.py", line 1163, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\applications.py", line 90, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\middleware\errors.py", line 186, in __call__
+    raise exc
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\middleware\cors.py", line 96, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\middleware\cors.py", line 154, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\routing.py", line 2683, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\routing.py", line 1753, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\routing.py", line 2738, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\routing.py", line 1773, in _handle_selected
+    await original_route.handle(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\routing.py", line 1264, in handle
+    await app(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\routing.py", line 150, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\routing.py", line 136, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\routing.py", line 690, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\routing.py", line 346, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\concurrency.py", line 34, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\anyio\to_thread.py", line 63, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\anyio\_backends\_asyncio.py", line 2596, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\anyio\_backends\_asyncio.py", line 1029, in run
+    result = context.run(func, *args)
+  File "C:\odooo111\GlobeTrotter\backend\app\api\endpoints\users.py", line 24, in get_public_profile
+    .filter(CommunityExperience.publisher_id == user.id, CommunityExperience.is_published == True)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: type object 'CommunityExperience' has no attribute 'publisher_id'. Did you mean: 'published_at'?
+INFO:     127.0.0.1:54208 - "GET /api/users/Tejas HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\uvicorn\protocols\http\httptools_impl.py", line 422, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        self.scope, self.receive, self.send
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\uvicorn\middleware\proxy_headers.py", line 63, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\applications.py", line 1163, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\applications.py", line 90, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\middleware\errors.py", line 186, in __call__
+    raise exc
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\middleware\cors.py", line 96, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\middleware\cors.py", line 154, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\routing.py", line 2683, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\routing.py", line 1753, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\routing.py", line 2738, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\routing.py", line 1773, in _handle_selected
+    await original_route.handle(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\routing.py", line 1264, in handle
+    await app(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\routing.py", line 150, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\routing.py", line 136, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\routing.py", line 690, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\routing.py", line 346, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\concurrency.py", line 34, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\anyio\to_thread.py", line 63, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\anyio\_backends\_asyncio.py", line 2596, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\anyio\_backends\_asyncio.py", line 1029, in run
+    result = context.run(func, *args)
+  File "C:\odooo111\GlobeTrotter\backend\app\api\endpoints\users.py", line 24, in get_public_profile
+    .filter(CommunityExperience.publisher_id == user.id, CommunityExperience.is_published == True)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: type object 'CommunityExperience' has no attribute 'publisher_id'. Did you mean: 'published_at'?
+INFO:     127.0.0.1:57897 - "GET /api/users/Tejas HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\uvicorn\protocols\http\httptools_impl.py", line 422, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        self.scope, self.receive, self.send
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\uvicorn\middleware\proxy_headers.py", line 63, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\applications.py", line 1163, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\applications.py", line 90, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\middleware\errors.py", line 186, in __call__
+    raise exc
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\middleware\cors.py", line 96, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\middleware\cors.py", line 154, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\routing.py", line 2683, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\routing.py", line 1753, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\routing.py", line 2738, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\routing.py", line 1773, in _handle_selected
+    await original_route.handle(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\routing.py", line 1264, in handle
+    await app(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\routing.py", line 150, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\routing.py", line 136, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\routing.py", line 690, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\routing.py", line 346, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\concurrency.py", line 34, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\anyio\to_thread.py", line 63, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\anyio\_backends\_asyncio.py", line 2596, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\anyio\_backends\_asyncio.py", line 1029, in run
+    result = context.run(func, *args)
+  File "C:\odooo111\GlobeTrotter\backend\app\api\endpoints\users.py", line 24, in get_public_profile
+    .filter(CommunityExperience.publisher_id == user.id, CommunityExperience.is_published == True)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: type object 'CommunityExperience' has no attribute 'publisher_id'. Did you mean: 'published_at'?
+INFO:     127.0.0.1:59697 - "GET /api/community/experiences/22 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59697 - "GET /api/community/experiences/22 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59697 - "GET /api/users/Tejas HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\uvicorn\protocols\http\httptools_impl.py", line 422, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        self.scope, self.receive, self.send
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\uvicorn\middleware\proxy_headers.py", line 63, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\applications.py", line 1163, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\applications.py", line 90, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\middleware\errors.py", line 186, in __call__
+    raise exc
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\middleware\cors.py", line 96, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\middleware\cors.py", line 154, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\routing.py", line 2683, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\routing.py", line 1753, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\routing.py", line 2738, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\routing.py", line 1773, in _handle_selected
+    await original_route.handle(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\routing.py", line 1264, in handle
+    await app(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\routing.py", line 150, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\routing.py", line 136, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\routing.py", line 690, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\routing.py", line 346, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\concurrency.py", line 34, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\anyio\to_thread.py", line 63, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\anyio\_backends\_asyncio.py", line 2596, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\anyio\_backends\_asyncio.py", line 1029, in run
+    result = context.run(func, *args)
+  File "C:\odooo111\GlobeTrotter\backend\app\api\endpoints\users.py", line 24, in get_public_profile
+    .filter(CommunityExperience.publisher_id == user.id, CommunityExperience.is_published == True)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: type object 'CommunityExperience' has no attribute 'publisher_id'. Did you mean: 'published_at'?
+INFO:     127.0.0.1:56910 - "GET /api/users/Tejas HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\uvicorn\protocols\http\httptools_impl.py", line 422, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        self.scope, self.receive, self.send
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\uvicorn\middleware\proxy_headers.py", line 63, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\applications.py", line 1163, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\applications.py", line 90, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\middleware\errors.py", line 186, in __call__
+    raise exc
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\middleware\cors.py", line 96, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\middleware\cors.py", line 154, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\routing.py", line 2683, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\routing.py", line 1753, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\routing.py", line 2738, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\routing.py", line 1773, in _handle_selected
+    await original_route.handle(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\routing.py", line 1264, in handle
+    await app(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\routing.py", line 150, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\routing.py", line 136, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\routing.py", line 690, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\routing.py", line 346, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\concurrency.py", line 34, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\anyio\to_thread.py", line 63, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\anyio\_backends\_asyncio.py", line 2596, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\anyio\_backends\_asyncio.py", line 1029, in run
+    result = context.run(func, *args)
+  File "C:\odooo111\GlobeTrotter\backend\app\api\endpoints\users.py", line 24, in get_public_profile
+    .filter(CommunityExperience.publisher_id == user.id, CommunityExperience.is_published == True)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: type object 'CommunityExperience' has no attribute 'publisher_id'. Did you mean: 'published_at'?
+WARNING:  WatchFiles detected changes in 'app\api\endpoints\users.py'. Reloading...
+ INFO:     127.0.0.1:50264 - "GET /api/users/Tejas HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\uvicorn\protocols\http\httptools_impl.py", line 422, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        self.scope, self.receive, self.send
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\uvicorn\middleware\proxy_headers.py", line 63, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\applications.py", line 1163, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\applications.py", line 90, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\middleware\errors.py", line 186, in __call__
+    raise exc
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\middleware\cors.py", line 88, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\routing.py", line 2683, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\routing.py", line 1753, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\routing.py", line 2738, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\routing.py", line 1773, in _handle_selected
+    await original_route.handle(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\routing.py", line 1264, in handle
+    await app(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\routing.py", line 150, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\routing.py", line 136, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\routing.py", line 690, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\routing.py", line 346, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\concurrency.py", line 34, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\anyio\to_thread.py", line 63, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\anyio\_backends\_asyncio.py", line 2596, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\anyio\_backends\_asyncio.py", line 1029, in run
+    result = context.run(func, *args)
+  File "C:\odooo111\GlobeTrotter\backend\app\api\endpoints\users.py", line 24, in get_public_profile
+    # published_by is the correct FK field name (not publisher_id)
+AttributeError: type object 'CommunityExperience' has no attribute 'publisher_id'. Did you mean: 'published_at'?
+INFO:     127.0.0.1:53198 - "GET /api/users/Tejas HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\uvicorn\protocols\http\httptools_impl.py", line 422, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        self.scope, self.receive, self.send
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\uvicorn\middleware\proxy_headers.py", line 63, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\applications.py", line 1163, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\applications.py", line 90, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\middleware\errors.py", line 186, in __call__
+    raise exc
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\middleware\cors.py", line 88, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\routing.py", line 2683, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\routing.py", line 1753, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\routing.py", line 2738, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\routing.py", line 1773, in _handle_selected
+    await original_route.handle(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\routing.py", line 1264, in handle
+    await app(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\routing.py", line 150, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\routing.py", line 136, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\routing.py", line 690, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\routing.py", line 346, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\concurrency.py", line 34, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\anyio\to_thread.py", line 63, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\anyio\_backends\_asyncio.py", line 2596, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\anyio\_backends\_asyncio.py", line 1029, in run
+    result = context.run(func, *args)
+  File "C:\odooo111\GlobeTrotter\backend\app\api\endpoints\users.py", line 24, in get_public_profile
+    # published_by is the correct FK field name (not publisher_id)
+AttributeError: type object 'CommunityExperience' has no attribute 'publisher_id'. Did you mean: 'published_at'?
+INFO:     127.0.0.1:51642 - "GET /api/users/Tejas HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\uvicorn\protocols\http\httptools_impl.py", line 422, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        self.scope, self.receive, self.send
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\uvicorn\middleware\proxy_headers.py", line 63, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\applications.py", line 1163, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\applications.py", line 90, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\middleware\errors.py", line 186, in __call__
+    raise exc
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\middleware\cors.py", line 88, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\routing.py", line 2683, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\routing.py", line 1753, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\routing.py", line 2738, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\routing.py", line 1773, in _handle_selected
+    await original_route.handle(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\routing.py", line 1264, in handle
+    await app(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\routing.py", line 150, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\routing.py", line 136, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\routing.py", line 690, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\routing.py", line 346, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\concurrency.py", line 34, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\anyio\to_thread.py", line 63, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\anyio\_backends\_asyncio.py", line 2596, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\anyio\_backends\_asyncio.py", line 1029, in run
+    result = context.run(func, *args)
+  File "C:\odooo111\GlobeTrotter\backend\app\api\endpoints\users.py", line 24, in get_public_profile
+    # published_by is the correct FK field name (not publisher_id)
+AttributeError: type object 'CommunityExperience' has no attribute 'publisher_id'. Did you mean: 'published_at'?
+INFO:     127.0.0.1:54013 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62173 - "GET /api/community/experiences HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49328 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51147 - "GET /api/users/Tejas HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\uvicorn\protocols\http\httptools_impl.py", line 422, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        self.scope, self.receive, self.send
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\uvicorn\middleware\proxy_headers.py", line 63, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\applications.py", line 1163, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\applications.py", line 90, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\middleware\errors.py", line 186, in __call__
+    raise exc
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\middleware\cors.py", line 88, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\routing.py", line 2683, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\routing.py", line 1753, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\routing.py", line 2738, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\routing.py", line 1773, in _handle_selected
+    await original_route.handle(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\routing.py", line 1264, in handle
+    await app(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\routing.py", line 150, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\routing.py", line 136, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\routing.py", line 690, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\fastapi\routing.py", line 346, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\starlette\concurrency.py", line 34, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\anyio\to_thread.py", line 63, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\anyio\_backends\_asyncio.py", line 2596, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\anyio\_backends\_asyncio.py", line 1029, in run
+    result = context.run(func, *args)
+  File "C:\odooo111\GlobeTrotter\backend\app\api\endpoints\users.py", line 24, in get_public_profile
+    # published_by is the correct FK field name (not publisher_id)
+AttributeError: type object 'CommunityExperience' has no attribute 'publisher_id'. Did you mean: 'published_at'?
+INFO:     127.0.0.1:60227 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [20348]
+WARNING:  WatchFiles detected changes in 'app\api\endpoints\community.py'. Reloading...
+ INFO:     Started server process [13668]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [13668]
+INFO:     Started server process [9960]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     127.0.0.1:61402 - "GET /api/users/Tejas HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64780 - "GET /api/users/does-not-exist HTTP/1.1" 404 Not Found
+C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\jwt\api_jwt.py:368: InsecureKeyLengthWarning: The HMAC key is 30 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:     127.0.0.1:61785 - "GET /api/users/Tejas HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61785 - "GET /api/users/Tejas HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61785 - "OPTIONS /api/community/experiences?sort_by=recommended HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50532 - "OPTIONS /api/community/experiences?sort_by=recommended HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50532 - "GET /api/community/experiences?sort_by=recommended HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61785 - "GET /api/community/experiences?sort_by=recommended HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63352 - "OPTIONS /api/community/experiences?sort_by=recent HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63352 - "GET /api/community/experiences?sort_by=recent HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63352 - "OPTIONS /api/community/experiences/22 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49280 - "OPTIONS /api/community/experiences/22 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49280 - "GET /api/community/experiences/22 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49280 - "GET /api/community/experiences/22 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58107 - "GET /api/users/Tejas HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58107 - "GET /api/users/Tejas HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58107 - "OPTIONS /auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60936 - "OPTIONS /auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58107 - "GET /auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60936 - "OPTIONS /api/saved-destinations HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58107 - "GET /auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60936 - "GET /api/saved-destinations HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58107 - "OPTIONS /api/cities HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60936 - "GET /api/saved-destinations HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58107 - "GET /api/cities HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60936 - "GET /api/cities HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60939 - "GET /api/users/Tejas HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59127 - "OPTIONS /auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59127 - "PUT /auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57649 - "OPTIONS /api/dashboard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56077 - "OPTIONS /api/dashboard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57649 - "GET /api/cities HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56077 - "GET /api/dashboard HTTP/1.1" 200 OK
+C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\jwt\api_jwt.py:368: InsecureKeyLengthWarning: The HMAC key is 30 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:     127.0.0.1:56077 - "GET /api/dashboard HTTP/1.1" 200 OK
+C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\jwt\api_jwt.py:368: InsecureKeyLengthWarning: The HMAC key is 30 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:     127.0.0.1:52454 - "GET /api/dashboard HTTP/1.1" 200 OK
+C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\jwt\api_jwt.py:368: InsecureKeyLengthWarning: The HMAC key is 30 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:     127.0.0.1:59353 - "GET /api/dashboard HTTP/1.1" 200 OK
+C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\jwt\api_jwt.py:368: InsecureKeyLengthWarning: The HMAC key is 30 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:     127.0.0.1:56591 - "GET /api/dashboard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56591 - "OPTIONS /api/cities HTTP/1.1" 200 OK
+C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\jwt\api_jwt.py:368: InsecureKeyLengthWarning: The HMAC key is 30 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:     127.0.0.1:56591 - "GET /api/dashboard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56591 - "GET /api/cities HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57065 - "OPTIONS /api/cities?q=mumbai HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57065 - "GET /api/cities?q=mumbai HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59581 - "GET /api/cities?q=mumbai HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59581 - "GET /api/cities HTTP/1.1" 200 OK
+C:\Users\sujal\AppData\Local\Programs\Python\Python314\Lib\site-packages\jwt\api_jwt.py:368: InsecureKeyLengthWarning: The HMAC key is 30 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:     127.0.0.1:57540 - "GET /api/dashboard HTTP/1.1" 200 OK

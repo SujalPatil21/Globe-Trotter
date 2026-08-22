@@ -12,6 +12,7 @@ from app.schemas.community import CommunityExperienceResponse, LikeResponse, Cop
 
 router = APIRouter(prefix="/community", tags=["Community"])
 
+
 @router.get("/experiences", response_model=List[CommunityExperienceResponse])
 def get_community_experiences(
     city: Optional[str] = None,
@@ -67,6 +68,7 @@ def get_community_experiences(
     user_id = current_user.id if current_user else None
     for exp in filtered_exps:
         exp.publisher_name = exp.publisher.full_name or exp.publisher.username if exp.publisher else "Anonymous"
+        exp.publisher_username = exp.publisher.username if exp.publisher else ""
         if user_id:
             has_liked = db.query(CommunityExperienceLike).filter(
                 CommunityExperienceLike.experience_id == exp.id,
@@ -87,6 +89,7 @@ def get_experience_detail(
         raise HTTPException(status_code=404, detail="Experience not found")
         
     exp.publisher_name = exp.publisher.full_name or exp.publisher.username if exp.publisher else "Anonymous"
+    exp.publisher_username = exp.publisher.username if exp.publisher else ""
     
     if current_user:
         has_liked = db.query(CommunityExperienceLike).filter(
@@ -193,3 +196,4 @@ def copy_experience(experience_id: int, db: Session = Depends(get_db), current_u
     db.commit()
     
     return {"status": "success", "new_trip_id": new_trip.id}
+

@@ -15,6 +15,7 @@ class CommunityExperienceResponse(BaseModel):
     # Nested trip data
     trip: Optional[TripResponse] = None
     publisher_name: str = "Anonymous"
+    publisher_username: str = ""
     
     # Additional flags/metadata for the frontend
     is_liked_by_me: bool = False

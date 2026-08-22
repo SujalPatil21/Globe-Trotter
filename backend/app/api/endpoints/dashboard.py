@@ -33,6 +33,6 @@ def get_dashboard_summary(db: Session = Depends(get_db), current_user: User = De
             "completed_count": len(completed)
         },
         "ongoing_trips": ongoing,
-        "upcoming_trips": upcoming[:3],
+        "upcoming_trips": upcoming,
         "recommended_destinations": recommended
     }
