@@ -5,7 +5,7 @@ from datetime import date, datetime
 from app.db.database import get_db
 from app.auth.security.dependencies import get_current_user
 from app.models.user import User
-from app.models.trip import Trip, TripStop, TripActivity, Expense, SavedDestination
+from app.models.trip import Trip, TripStop, TripActivity, Expense, SavedDestination, CommunityExperience
 from app.models.master import City, Activity
 from app.schemas.trip import (
     TripCreate, TripUpdate, TripResponse,
@@ -69,6 +69,45 @@ def delete_trip(trip_id: int, db: Session = Depends(get_db), current_user: User 
     db.delete(trip)
     db.commit()
     return None
+
+# -----------------
+# Publish to Community
+# -----------------
+
+from app.schemas.community import PublishResponse
+
+@router.post("/{trip_id}/publish", response_model=PublishResponse)
+def publish_trip(trip_id: int, db: Session = Depends(get_db), current_user: User = Depends(get_current_user)):
+    trip = db.query(Trip).filter(Trip.id == trip_id, Trip.user_id == current_user.id).first()
+    if not trip:
+        raise HTTPException(status_code=404, detail="Trip not found")
+        
+    exp = db.query(CommunityExperience).filter(CommunityExperience.trip_id == trip_id).first()
+    if exp:
+        exp.is_published = True
+        db.commit()
+        db.refresh(exp)
+    else:
+        exp = CommunityExperience(trip_id=trip_id, published_by=current_user.id, is_published=True)
+        db.add(exp)
+        db.commit()
+        db.refresh(exp)
+        
+    return {"status": "success", "is_published": True, "experience": exp}
+
+@router.post("/{trip_id}/unpublish", response_model=PublishResponse)
+def unpublish_trip(trip_id: int, db: Session = Depends(get_db), current_user: User = Depends(get_current_user)):
+    trip = db.query(Trip).filter(Trip.id == trip_id, Trip.user_id == current_user.id).first()
+    if not trip:
+        raise HTTPException(status_code=404, detail="Trip not found")
+        
+    exp = db.query(CommunityExperience).filter(CommunityExperience.trip_id == trip_id).first()
+    if exp:
+        exp.is_published = False
+        db.commit()
+        db.refresh(exp)
+        
+    return {"status": "success", "is_published": False, "experience": exp}
 
 # -----------------
 # Stops

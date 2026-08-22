@@ -262,6 +262,12 @@ def seed():
         print("\n" + ("=" * 60))
         if all_ok:
             print("[OK] Import complete. All row counts match. No orphaned FKs.")
+            
+            # Seed community experiences
+            print("\n" + "=" * 60)
+            import seed_community
+            seed_community.run_seed()
+            print("=" * 60)
         else:
             print("[FAIL] Import completed with issues -- review warnings above.")
         print("=" * 60)
@@ -269,3 +275,4 @@ def seed():
 
 if __name__ == "__main__":
     seed()
+

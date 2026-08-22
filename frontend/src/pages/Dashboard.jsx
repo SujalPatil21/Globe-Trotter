@@ -37,6 +37,9 @@ export default function Dashboard() {
       <header className="flex justify-between items-center mb-8">
         <h1 className="text-3xl font-bold text-slate-800">GlobeTrotter Dashboard</h1>
         <div className="flex gap-4 items-center">
+          <Link to="/community" className="text-slate-600 font-medium hover:text-indigo-600">
+            Community
+          </Link>
           <Link to="/profile" className="text-slate-600 font-medium hover:text-indigo-600">
             Profile Settings
           </Link>

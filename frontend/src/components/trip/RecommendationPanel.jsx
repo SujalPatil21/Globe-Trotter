@@ -1,5 +1,6 @@
 import { useState, useEffect, useCallback } from 'react';
-import { recommendationsApi, tripsApi } from '../../api';
+import { Link } from 'react-router-dom';
+import { recommendationsApi, tripsApi, communityApi } from '../../api';
 
 /**
  * RecommendationPanel
@@ -31,6 +32,27 @@ export default function RecommendationPanel({
   const [activeTab, setActiveTab] = useState('places');
   const [showAll, setShowAll] = useState(false);
   const [addingId, setAddingId] = useState(null);
+
+  const [expandedCommunityFor, setExpandedCommunityFor] = useState(null);
+  const [communityExperiences, setCommunityExperiences] = useState([]);
+  const [loadingCommunity, setLoadingCommunity] = useState(false);
+
+  const handleToggleCommunity = async (itemId) => {
+    if (expandedCommunityFor === itemId) {
+      setExpandedCommunityFor(null);
+      return;
+    }
+    setExpandedCommunityFor(itemId);
+    setLoadingCommunity(true);
+    try {
+      const exps = await communityApi.getExperiences({ city: data?.city?.city });
+      setCommunityExperiences(exps || []);
+    } catch (err) {
+      console.error('Failed to fetch community experiences', err);
+    } finally {
+      setLoadingCommunity(false);
+    }
+  };
 
   const fetchRecommendations = useCallback(async () => {
     if (!cityId) return;
@@ -169,16 +191,55 @@ export default function RecommendationPanel({
                     <p className="text-xs text-slate-400 mt-1 line-clamp-2">{spot.description}</p>
                     <p className="text-xs text-slate-400 mt-0.5">Best: {spot.best_time_to_visit}</p>
                   </div>
-                  {stopId && activityDate && (
+                  <div className="flex items-center gap-2 shrink-0">
                     <button
-                      onClick={() => handleAddPlace(spot)}
-                      disabled={addingId === spot.id}
-                      className="shrink-0 text-xs bg-indigo-600 text-white px-3 py-1.5 rounded-lg font-medium hover:bg-indigo-700 disabled:opacity-50 transition"
+                      onClick={() => handleToggleCommunity(spot.id)}
+                      className="text-xs bg-slate-100 text-slate-700 px-3 py-1.5 rounded-lg font-medium hover:bg-slate-200 transition"
                     >
-                      {addingId === spot.id ? '...' : '+ Add'}
+                      Community
                     </button>
-                  )}
+                    {stopId && activityDate && (
+                      <button
+                        onClick={() => handleAddPlace(spot)}
+                        disabled={addingId === spot.id}
+                        className="text-xs bg-indigo-600 text-white px-3 py-1.5 rounded-lg font-medium hover:bg-indigo-700 disabled:opacity-50 transition"
+                      >
+                        {addingId === spot.id ? '...' : '+ Add'}
+                      </button>
+                    )}
+                  </div>
                 </div>
+                {expandedCommunityFor === spot.id && (
+                  <div className="mt-3 p-3 bg-indigo-50/50 rounded-lg border border-indigo-100/50">
+                    <h5 className="text-xs font-semibold text-slate-700 mb-2">Community Experiences</h5>
+                    {loadingCommunity ? (
+                      <div className="text-xs text-slate-500 animate-pulse">Loading...</div>
+                    ) : communityExperiences.length === 0 ? (
+                      <div className="text-xs text-slate-500">No community experiences found for {data.city.city}.</div>
+                    ) : (
+                      <>
+                        <ul className="space-y-1.5 mb-2">
+                          {communityExperiences.slice(0, 2).map(exp => {
+                             const days = Math.round((new Date(exp.trip.end_date) - new Date(exp.trip.start_date)) / (1000 * 3600 * 24)) + 1;
+                             return (
+                               <li key={exp.id} className="text-xs text-slate-600 flex items-start gap-2">
+                                 <span className="text-indigo-400 mt-0.5">•</span>
+                                 <span>{exp.trip.name} — {days} Days</span>
+                               </li>
+                             );
+                          })}
+                        </ul>
+                        {communityExperiences.length > 2 && (
+                          <div className="mt-2 pt-2 border-t border-indigo-100/50">
+                             <Link to={`/community?city=${encodeURIComponent(data.city.city)}`} className="text-xs font-medium text-indigo-600 hover:text-indigo-800 flex items-center gap-1">
+                               View All
+                             </Link>
+                          </div>
+                        )}
+                      </>
+                    )}
+                  </div>
+                )}
               </div>
             ))
           )}
@@ -217,16 +278,55 @@ export default function RecommendationPanel({
                     </p>
                     {r.notes && <p className="text-xs text-slate-400 mt-0.5 line-clamp-1">{r.notes}</p>}
                   </div>
-                  {stopId && activityDate && (
+                  <div className="flex items-center gap-2 shrink-0">
                     <button
-                      onClick={() => handleAddRestaurant(r)}
-                      disabled={addingId === r.id}
-                      className="shrink-0 text-xs bg-indigo-600 text-white px-3 py-1.5 rounded-lg font-medium hover:bg-indigo-700 disabled:opacity-50 transition"
+                      onClick={() => handleToggleCommunity(r.id)}
+                      className="text-xs bg-slate-100 text-slate-700 px-3 py-1.5 rounded-lg font-medium hover:bg-slate-200 transition"
                     >
-                      {addingId === r.id ? '...' : '+ Add'}
+                      Community
                     </button>
-                  )}
+                    {stopId && activityDate && (
+                      <button
+                        onClick={() => handleAddRestaurant(r)}
+                        disabled={addingId === r.id}
+                        className="text-xs bg-indigo-600 text-white px-3 py-1.5 rounded-lg font-medium hover:bg-indigo-700 disabled:opacity-50 transition"
+                      >
+                        {addingId === r.id ? '...' : '+ Add'}
+                      </button>
+                    )}
+                  </div>
                 </div>
+                {expandedCommunityFor === r.id && (
+                  <div className="mt-3 p-3 bg-indigo-50/50 rounded-lg border border-indigo-100/50">
+                    <h5 className="text-xs font-semibold text-slate-700 mb-2">Community Experiences</h5>
+                    {loadingCommunity ? (
+                      <div className="text-xs text-slate-500 animate-pulse">Loading...</div>
+                    ) : communityExperiences.length === 0 ? (
+                      <div className="text-xs text-slate-500">No community experiences found for {data.city.city}.</div>
+                    ) : (
+                      <>
+                        <ul className="space-y-1.5 mb-2">
+                          {communityExperiences.slice(0, 2).map(exp => {
+                             const days = Math.round((new Date(exp.trip.end_date) - new Date(exp.trip.start_date)) / (1000 * 3600 * 24)) + 1;
+                             return (
+                               <li key={exp.id} className="text-xs text-slate-600 flex items-start gap-2">
+                                 <span className="text-indigo-400 mt-0.5">•</span>
+                                 <span>{exp.trip.name} — {days} Days</span>
+                               </li>
+                             );
+                          })}
+                        </ul>
+                        {communityExperiences.length > 2 && (
+                          <div className="mt-2 pt-2 border-t border-indigo-100/50">
+                             <Link to={`/community?city=${encodeURIComponent(data.city.city)}`} className="text-xs font-medium text-indigo-600 hover:text-indigo-800 flex items-center gap-1">
+                               View All
+                             </Link>
+                          </div>
+                        )}
+                      </>
+                    )}
+                  </div>
+                )}
               </div>
             ))
           )}

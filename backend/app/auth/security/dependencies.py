@@ -34,6 +34,16 @@ def get_current_user(token: str = Depends(oauth2_scheme), db: Session = Depends(
         
     return user
 
+def get_optional_current_user(token: str = Depends(oauth2_scheme), db: Session = Depends(get_db)) -> User | None:
+    if not token:
+        return None
+    try:
+        payload = JWTService.verify_token(token)
+        user_id = int(payload.get("sub"))
+        return AuthRepository.get_user_by_id(db, user_id)
+    except:
+        return None
+
 def get_current_active_user(current_user: User = Depends(get_current_user)) -> User:
     """
     Dependency to ensure that the current authenticated user has verified their email.

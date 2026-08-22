@@ -10,6 +10,8 @@ import TripWorkspace from './pages/TripWorkspace';
 import PublicTrip from './pages/PublicTrip';
 import Profile from './pages/Profile';
 import CityDiscovery from './pages/CityDiscovery';
+import Community from './pages/Community';
+import CommunityExperience from './pages/CommunityExperience';
 
 function App() {
   return (
@@ -28,6 +30,8 @@ function App() {
           <Route path="/trips/create" element={<TripCreate />} />
           <Route path="/trips/:tripId/*" element={<TripWorkspace />} />
           <Route path="/share/:shareId" element={<PublicTrip />} />
+          <Route path="/community" element={<Community />} />
+          <Route path="/community/experiences/:experienceId" element={<CommunityExperience />} />
         </Routes>
       </div>
     </BrowserRouter>

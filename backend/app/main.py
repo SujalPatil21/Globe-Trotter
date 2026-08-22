@@ -61,7 +61,7 @@ async def validation_exception_handler(request: Request, exc: RequestValidationE
 def health_check():
     return {"status": "Auth service is running."}
 
-from app.api.endpoints import trips, master, stops, public, dashboard, saved_destinations, expenses, recommendations
+from app.api.endpoints import trips, master, stops, public, dashboard, saved_destinations, expenses, recommendations, community
 
 app.include_router(auth_router)
 app.include_router(trips.router, prefix="/api")
@@ -72,3 +72,4 @@ app.include_router(dashboard.router, prefix="/api")
 app.include_router(saved_destinations.router, prefix="/api")
 app.include_router(expenses.router, prefix="/api")
 app.include_router(recommendations.router, prefix="/api")
+app.include_router(community.router, prefix="/api")

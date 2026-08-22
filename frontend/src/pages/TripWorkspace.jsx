@@ -26,6 +26,20 @@ export default function TripWorkspace() {
     refreshTrip();
   }, [refreshTrip]);
 
+  const handlePublishToggle = async () => {
+    try {
+      if (trip.is_published) {
+        await tripsApi.unpublishTrip(tripId);
+        setTrip({ ...trip, is_published: false });
+      } else {
+        await tripsApi.publishTrip(tripId);
+        setTrip({ ...trip, is_published: true });
+      }
+    } catch (err) {
+      alert('Error changing publish status');
+    }
+  };
+
   const openEditTrip = () => {
     setEditTripForm({
       name: trip.name,
@@ -91,9 +105,21 @@ export default function TripWorkspace() {
             Share Link: <a href={`/share/${trip.share_id}`} target="_blank" rel="noreferrer" className="underline font-medium">/share/{trip.share_id}</a>
           </div>
         </div>
-        <button onClick={openEditTrip} className="px-4 py-2 bg-slate-100 text-slate-700 rounded-md font-medium hover:bg-slate-200">
-          Edit Trip Settings
-        </button>
+        <div className="flex gap-2">
+          <button 
+            onClick={handlePublishToggle} 
+            className={`px-4 py-2 rounded-md font-medium transition ${
+              trip.is_published 
+                ? 'bg-emerald-100 text-emerald-700 hover:bg-emerald-200 border border-emerald-200'
+                : 'bg-indigo-600 text-white hover:bg-indigo-700 shadow-sm'
+            }`}
+          >
+            {trip.is_published ? 'Published to Community' : 'Publish to Community'}
+          </button>
+          <button onClick={openEditTrip} className="px-4 py-2 bg-slate-100 text-slate-700 rounded-md font-medium hover:bg-slate-200 border border-slate-200">
+            Edit Trip Settings
+          </button>
+        </div>
       </header>
 
       {showEditTripModal && (

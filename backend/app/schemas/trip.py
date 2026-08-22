@@ -29,6 +29,7 @@ class TripResponse(TripCreate):
     share_id: str
     created_at: datetime
     updated_at: datetime
+    is_published: bool = False
     stops: List["TripStopResponse"] = []
 
     class Config:

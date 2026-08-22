@@ -1,6 +1,6 @@
 import datetime
 import uuid
-from sqlalchemy import String, Integer, Float, Text, Boolean, DateTime, ForeignKey, Date, Time
+from sqlalchemy import String, Integer, Float, Text, Boolean, DateTime, ForeignKey, Date, Time, UniqueConstraint
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 from app.db.database import Base
 
@@ -31,6 +31,11 @@ class Trip(Base):
 
     stops: Mapped[list["TripStop"]] = relationship(back_populates="trip", cascade="all, delete-orphan", order_by="TripStop.display_order")
     expenses: Mapped[list["Expense"]] = relationship(back_populates="trip", cascade="all, delete-orphan")
+    community_experience: Mapped["CommunityExperience"] = relationship(back_populates="trip", uselist=False, cascade="all, delete-orphan")
+
+    @property
+    def is_published(self) -> bool:
+        return self.community_experience.is_published if self.community_experience else False
 
 class TripStop(Base):
     __tablename__ = "trip_stops"
@@ -84,3 +89,26 @@ class SavedDestination(Base):
     created_at: Mapped[datetime.datetime] = mapped_column(DateTime(timezone=True), default=get_utc_now, nullable=False)
     
     city = relationship("City", lazy="joined")
+
+class CommunityExperience(Base):
+    __tablename__ = "community_experiences"
+
+    id: Mapped[int] = mapped_column(primary_key=True, autoincrement=True)
+    trip_id: Mapped[int] = mapped_column(ForeignKey("trips.id", ondelete="CASCADE"), nullable=False, unique=True)
+    published_by: Mapped[int] = mapped_column(ForeignKey("users.id", ondelete="CASCADE"), nullable=False)
+    published_at: Mapped[datetime.datetime] = mapped_column(DateTime(timezone=True), default=get_utc_now, nullable=False)
+    is_published: Mapped[bool] = mapped_column(Boolean, default=True, nullable=False)
+    like_count: Mapped[int] = mapped_column(Integer, default=0, nullable=False)
+    copy_count: Mapped[int] = mapped_column(Integer, default=0, nullable=False)
+
+    trip: Mapped["Trip"] = relationship("Trip")
+    publisher = relationship("User")
+
+class CommunityExperienceLike(Base):
+    __tablename__ = "community_experience_likes"
+    __table_args__ = (UniqueConstraint("experience_id", "user_id", name="uq_experience_user_like"),)
+
+    id: Mapped[int] = mapped_column(primary_key=True, autoincrement=True)
+    experience_id: Mapped[int] = mapped_column(ForeignKey("community_experiences.id", ondelete="CASCADE"), nullable=False, index=True)
+    user_id: Mapped[int] = mapped_column(ForeignKey("users.id", ondelete="CASCADE"), nullable=False, index=True)
+    created_at: Mapped[datetime.datetime] = mapped_column(DateTime(timezone=True), default=get_utc_now, nullable=False)

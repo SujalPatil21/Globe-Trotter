@@ -97,6 +97,14 @@ export const tripsApi = {
     const response = await apiClient.get(`/public/trips/${shareId}`);
     return response.data;
   },
+  publishTrip: async (id) => {
+    const response = await apiClient.post(`/trips/${id}/publish`);
+    return response.data;
+  },
+  unpublishTrip: async (id) => {
+    const response = await apiClient.post(`/trips/${id}/unpublish`);
+    return response.data;
+  },
   addStop: async (tripId, data) => {
     const response = await apiClient.post(`/trips/${tripId}/stops`, data);
     return response.data;
@@ -197,9 +205,31 @@ export const recommendationsApi = {
     const response = await apiClient.post('/recommendations/budget/multi-city', stops, { params });
     return response.data;
   },
-  // Trip-aware recommendations (auth required)
   getTripRecommendations: async (tripId, params = {}) => {
     const response = await apiClient.get(`/recommendations/trips/${tripId}`, { params });
     return response.data;
   },
+};
+
+export const communityApi = {
+  getExperiences: async (params = {}) => {
+    const response = await apiClient.get('/community/experiences', { params });
+    return response.data;
+  },
+  getExperience: async (id) => {
+    const response = await apiClient.get(`/community/experiences/${id}`);
+    return response.data;
+  },
+  likeExperience: async (id) => {
+    const response = await apiClient.post(`/community/experiences/${id}/like`);
+    return response.data;
+  },
+  unlikeExperience: async (id) => {
+    const response = await apiClient.delete(`/community/experiences/${id}/like`);
+    return response.data;
+  },
+  copyExperience: async (id) => {
+    const response = await apiClient.post(`/community/experiences/${id}/copy`);
+    return response.data;
+  }
 };
