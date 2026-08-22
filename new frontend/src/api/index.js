@@ -157,6 +157,10 @@ export const masterApi = {
     const params = cityId ? { city_id: cityId } : {};
     const response = await apiClient.get('/activities', { params });
     return response.data;
+  },
+  getSeasonalConditions: async (cityId, month) => {
+    const response = await apiClient.get(`/cities/${cityId}/seasonal-check`, { params: { month } });
+    return response.data;
   }
 };
 

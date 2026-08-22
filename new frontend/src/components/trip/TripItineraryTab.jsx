@@ -334,7 +334,7 @@ export default function TripItineraryTab({ trip, refreshTrip }) {
                       </div>
 
                       {/* Recommendations for this stop/day */}
-                      <div className="mt-12 pt-8 border-t border-charcoal/10">
+                      <div className="mt-8 pt-6 border-t border-charcoal/10">
                         <RecommendationPanel
                           cityId={day.stop.city_id}
                           stopId={day.stop.id}

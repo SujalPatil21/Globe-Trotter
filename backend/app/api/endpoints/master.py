@@ -11,6 +11,7 @@ from app.schemas.master import (
     BudgetEstimateResponse,
     ActivityResponse,
 )
+from app.services.seasonal_service import get_seasonal_conditions
 
 router = APIRouter(tags=["Master Data"])
 
@@ -33,6 +34,18 @@ def get_cities(
     if state:
         query = query.filter(City.state.ilike(f"%{state}%"))
     return query.order_by(City.state, City.city).all()
+
+
+@router.get("/cities/{city_id}/seasonal-check")
+def get_seasonal_check(
+    city_id: int,
+    month: int = Query(..., ge=1, le=12, description="Travel month (1–12)"),
+    db: Session = Depends(get_db),
+):
+    city = db.query(City).filter(City.id == city_id).first()
+    if not city:
+        raise HTTPException(status_code=404, detail="City not found")
+    return get_seasonal_conditions(city.city, month)
 
 
 @router.get("/cities/{city_id}", response_model=CityResponse)
