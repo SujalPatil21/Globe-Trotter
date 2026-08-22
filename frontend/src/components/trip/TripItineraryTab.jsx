@@ -11,6 +11,7 @@ export default function TripItineraryTab({ trip, refreshTrip }) {
   const [activitiesForCity, setActivitiesForCity] = useState([]);
   
   // Modals visibility
+  const [showActivitySuggestions, setShowActivitySuggestions] = useState(false);
   const [showStopModal, setShowStopModal] = useState(false);
   const [showPlaceModal, setShowPlaceModal] = useState(false);
   const [showActivityModal, setShowActivityModal] = useState(false);
@@ -18,7 +19,7 @@ export default function TripItineraryTab({ trip, refreshTrip }) {
   // Forms
   const [stopForm, setStopForm] = useState({ city_id: '', start_date: '', end_date: '' });
   const [placeForm, setPlaceForm] = useState({ custom_place_name: '', activity_date: '', start_time: '', custom_cost: '', notes: '' });
-  const [activityForm, setActivityForm] = useState({ activity_id: '', activity_date: '', start_time: '', custom_cost: '', notes: '' });
+  const [activityForm, setActivityForm] = useState({ activity_id: '', custom_place_name: '', activity_date: '', start_time: '', custom_cost: '', notes: '' });
   
   const [activeEditItem, setActiveEditItem] = useState(null);
   const [editForm, setEditForm] = useState({ activity_date: '', start_time: '', custom_cost: '', notes: '' });
@@ -119,7 +120,7 @@ export default function TripItineraryTab({ trip, refreshTrip }) {
 
   const openActivityModal = (stopId, dateStr, cityId) => {
     setActiveStopId(stopId);
-    setActivityForm({ ...activityForm, activity_date: dateStr, activity_id: '', start_time: '', custom_cost: '', notes: '' });
+    setActivityForm({ activity_id: '', custom_place_name: '', activity_date: dateStr, start_time: '', custom_cost: '', notes: '' });
     masterApi.getActivities(cityId).then(res => setActivitiesForCity(res)).catch(console.error);
     setShowActivityModal(true);
   };
@@ -144,17 +145,24 @@ export default function TripItineraryTab({ trip, refreshTrip }) {
   const handleAddCatalogActivity = async (e) => {
     e.preventDefault();
     try {
-      await tripsApi.addActivity(activeStopId, {
-        activity_id: parseInt(activityForm.activity_id),
+      const payload = {
         activity_date: activityForm.activity_date,
         start_time: activityForm.start_time || null,
         custom_cost: activityForm.custom_cost ? parseFloat(activityForm.custom_cost) : null,
         notes: activityForm.notes
-      });
+      };
+      
+      if (activityForm.activity_id) {
+        payload.activity_id = parseInt(activityForm.activity_id);
+      } else {
+        payload.custom_place_name = activityForm.custom_place_name;
+      }
+      
+      await tripsApi.addActivity(activeStopId, payload);
       setShowActivityModal(false);
       refreshTrip();
     } catch (err) {
-      alert("Error adding catalog activity.");
+      alert("Error adding activity.");
     }
   };
 
@@ -233,7 +241,7 @@ export default function TripItineraryTab({ trip, refreshTrip }) {
                   <div className="space-y-6">
                     <div className="flex gap-2">
                       <button onClick={() => openPlaceModal(day.stop.id, day.dateStr)} className="bg-indigo-50 text-indigo-700 px-3 py-1 rounded-md text-sm font-medium hover:bg-indigo-100">+ Add Place</button>
-                      <button onClick={() => openActivityModal(day.stop.id, day.dateStr, day.stop.city_id)} className="bg-slate-100 text-slate-700 px-3 py-1 rounded-md text-sm font-medium hover:bg-slate-200">+ Add Catalog Activity</button>
+                      <button onClick={() => openActivityModal(day.stop.id, day.dateStr, day.stop.city_id)} className="bg-slate-100 text-slate-700 px-3 py-1 rounded-md text-sm font-medium hover:bg-slate-200">+ Add Activity</button>
                     </div>
 
                     <div className="space-y-4">
@@ -317,11 +325,15 @@ export default function TripItineraryTab({ trip, refreshTrip }) {
               <div className="grid grid-cols-2 gap-4">
                 <div>
                   <label className="block text-sm font-medium text-slate-700">Start Date</label>
-                  <input type="date" required className="mt-1 w-full border rounded-md p-2" value={stopForm.start_date} onChange={e => setStopForm({...stopForm, start_date: e.target.value})} />
+                  <input type="date" required className="mt-1 w-full border rounded-md p-2" 
+                    min={trip.start_date} max={trip.end_date}
+                    value={stopForm.start_date} onChange={e => setStopForm({...stopForm, start_date: e.target.value})} />
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-slate-700">End Date</label>
-                  <input type="date" required className="mt-1 w-full border rounded-md p-2" value={stopForm.end_date} onChange={e => setStopForm({...stopForm, end_date: e.target.value})} />
+                  <input type="date" required className="mt-1 w-full border rounded-md p-2" 
+                    min={trip.start_date} max={trip.end_date}
+                    value={stopForm.end_date} onChange={e => setStopForm({...stopForm, end_date: e.target.value})} />
                 </div>
               </div>
               <div className="pt-4 flex justify-end space-x-3">
@@ -372,14 +384,31 @@ export default function TripItineraryTab({ trip, refreshTrip }) {
       {showActivityModal && (
         <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
           <div className="bg-white p-6 rounded-xl w-full max-w-md">
-            <h3 className="text-lg font-bold mb-4">Add Catalog Activity</h3>
+            <h3 className="text-lg font-bold mb-4">Add Activity</h3>
             <form onSubmit={handleAddCatalogActivity} className="space-y-4">
-              <div>
+              <div className="relative">
                 <label className="block text-sm font-medium text-slate-700">Activity</label>
-                <select required className="mt-1 w-full border rounded-md p-2" value={activityForm.activity_id} onChange={e => setActivityForm({...activityForm, activity_id: e.target.value})}>
-                  <option value="">Select an activity...</option>
-                  {activitiesForCity.map(a => <option key={a.id} value={a.id}>{a.name} (₹{a.cost})</option>)}
-                </select>
+                <input 
+                  type="text" required placeholder="Type activity name..." className="mt-1 w-full border rounded-md p-2" 
+                  value={activityForm.custom_place_name} 
+                  onChange={e => {
+                    setActivityForm({...activityForm, custom_place_name: e.target.value, activity_id: ''});
+                  }}
+                  onFocus={() => setShowActivitySuggestions(true)}
+                  onBlur={() => setTimeout(() => setShowActivitySuggestions(false), 200)}
+                />
+                {showActivitySuggestions && activitiesForCity.filter(a => a.name.toLowerCase().includes((activityForm.custom_place_name || '').toLowerCase())).length > 0 && (
+                  <ul className="absolute z-10 mt-1 w-full bg-white border border-slate-300 rounded-md shadow-lg max-h-60 overflow-auto">
+                    {activitiesForCity.filter(a => a.name.toLowerCase().includes((activityForm.custom_place_name || '').toLowerCase())).map(a => (
+                      <li key={a.id} className="px-4 py-2 hover:bg-indigo-50 cursor-pointer text-sm" onClick={() => {
+                        setActivityForm({...activityForm, activity_id: a.id, custom_place_name: a.name, custom_cost: a.cost});
+                        setShowActivitySuggestions(false);
+                      }}>
+                        {a.name} (₹{a.cost})
+                      </li>
+                    ))}
+                  </ul>
+                )}
               </div>
               <div>
                 <label className="block text-sm font-medium text-slate-700">Date</label>

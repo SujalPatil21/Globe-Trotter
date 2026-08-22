@@ -6,6 +6,7 @@ export default function Dashboard() {
   const [data, setData] = useState(null);
   const [cities, setCities] = useState([]);
   const [searchQuery, setSearchQuery] = useState('');
+  const [showAllTrips, setShowAllTrips] = useState(false);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -15,16 +16,7 @@ export default function Dashboard() {
   useEffect(() => {
     const timer = setTimeout(() => {
       masterApi.getCities(searchQuery).then(res => {
-        if (!searchQuery && res.length > 0) {
-          const spread = [];
-          const step = Math.max(1, Math.floor(res.length / 6));
-          for (let i = 0; i < res.length && spread.length < 6; i += step) {
-             spread.push(res[i]);
-          }
-          setCities(spread);
-        } else {
-          setCities(res.slice(0, 6));
-        }
+        setCities(res.slice(0, 9));
       }).catch(console.error);
     }, 300);
     return () => clearTimeout(timer);
@@ -56,18 +48,30 @@ export default function Dashboard() {
             No upcoming trips. Time to plan one!
           </div>
         ) : (
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {data.upcoming_trips.map(trip => (
-              <div key={trip.id} className="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-md transition">
-                {trip.cover_image && <img src={trip.cover_image} alt="Cover" className="w-full h-40 object-cover" />}
-                <div className="p-4">
-                  <h3 className="font-bold text-lg mb-1">{trip.name}</h3>
-                  <p className="text-sm text-slate-500">{trip.start_date} to {trip.end_date}</p>
-                  <Link to={`/trips/${trip.id}`} className="mt-4 block text-indigo-600 font-medium hover:underline">View Trip &rarr;</Link>
+          <>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {(showAllTrips ? data.upcoming_trips : data.upcoming_trips.slice(0, 3)).map(trip => (
+                <div key={trip.id} className="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-md transition">
+                  {trip.cover_image && <img src={trip.cover_image} alt="Cover" className="w-full h-40 object-cover" />}
+                  <div className="p-4">
+                    <h3 className="font-bold text-lg mb-1">{trip.name}</h3>
+                    <p className="text-sm text-slate-500">{trip.start_date} to {trip.end_date}</p>
+                    <Link to={`/trips/${trip.id}`} className="mt-4 block text-indigo-600 font-medium hover:underline">View Trip &rarr;</Link>
+                  </div>
                 </div>
+              ))}
+            </div>
+            {data.upcoming_trips.length > 3 && (
+              <div className="mt-6 text-center">
+                <button 
+                  onClick={() => setShowAllTrips(!showAllTrips)}
+                  className="bg-white border border-slate-300 text-slate-700 px-6 py-2 rounded-lg font-medium hover:bg-slate-50 transition"
+                >
+                  {showAllTrips ? 'Show Less' : 'View All Trips \u2192'}
+                </button>
               </div>
-            ))}
-          </div>
+            )}
+          </>
         )}
       </section>
 
