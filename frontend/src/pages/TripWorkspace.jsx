@@ -3,8 +3,10 @@ import { useParams, Link } from 'react-router-dom';
 import { tripsApi } from '../api';
 import TripOverviewTab from '../components/trip/TripOverviewTab';
 import TripItineraryTab from '../components/trip/TripItineraryTab';
-
 import TripBudgetTab from '../components/trip/TripBudgetTab';
+
+const INTEREST_OPTIONS = ['Heritage', 'Nature', 'Adventure', 'Food', 'Religious', 'Shopping'];
+const TIER_OPTIONS = ['budget', 'mid-range', 'luxury'];
 
 export default function TripWorkspace() {
   const { tripId } = useParams();
@@ -30,7 +32,9 @@ export default function TripWorkspace() {
       start_date: trip.start_date,
       end_date: trip.end_date,
       budget_limit: trip.budget_limit || '',
-      description: trip.description || ''
+      description: trip.description || '',
+      interests: trip.interests || '',
+      budget_tier: trip.budget_tier || '',
     });
     setShowEditTripModal(true);
   };
@@ -40,16 +44,33 @@ export default function TripWorkspace() {
     try {
       await tripsApi.updateTrip(trip.id, {
         ...editTripForm,
-        budget_limit: editTripForm.budget_limit ? parseFloat(editTripForm.budget_limit) : null
+        budget_limit: editTripForm.budget_limit ? parseFloat(editTripForm.budget_limit) : null,
+        interests: editTripForm.interests || null,
+        budget_tier: editTripForm.budget_tier || null,
       });
       setShowEditTripModal(false);
       refreshTrip();
     } catch (err) {
-      alert("Error updating trip. Check dates.");
+      alert('Error updating trip. Check dates.');
     }
   };
 
-  if (!trip) return <div className="p-10 text-center">Loading trip details...</div>;
+  // Toggle interest selection in edit form
+  const toggleInterest = (interest) => {
+    const current = editTripForm.interests
+      ? editTripForm.interests.split(',').map(i => i.trim()).filter(Boolean)
+      : [];
+    const updated = current.includes(interest)
+      ? current.filter(i => i !== interest)
+      : [...current, interest];
+    setEditTripForm({ ...editTripForm, interests: updated.join(',') });
+  };
+
+  if (!trip) return <div className="p-10 text-center text-slate-500">Loading trip details...</div>;
+
+  const selectedInterests = trip.interests
+    ? trip.interests.split(',').map(i => i.trim()).filter(Boolean)
+    : [];
 
   return (
     <div className="max-w-6xl mx-auto p-6">
@@ -58,6 +79,14 @@ export default function TripWorkspace() {
           <Link to="/dashboard" className="text-slate-500 hover:text-indigo-600 mb-2 inline-block">&larr; Back to Dashboard</Link>
           <h1 className="text-3xl font-bold text-slate-800">{trip.name}</h1>
           <p className="text-slate-500">{trip.start_date} to {trip.end_date}</p>
+          <div className="mt-2 flex flex-wrap gap-2">
+            {selectedInterests.map(i => (
+              <span key={i} className="text-xs bg-indigo-100 text-indigo-700 px-2 py-0.5 rounded-full font-medium">{i}</span>
+            ))}
+            {trip.budget_tier && (
+              <span className="text-xs bg-purple-100 text-purple-700 px-2 py-0.5 rounded-full font-medium capitalize">{trip.budget_tier}</span>
+            )}
+          </div>
           <div className="mt-2 text-sm bg-indigo-50 text-indigo-700 px-3 py-1 inline-block rounded-md">
             Share Link: <a href={`/share/${trip.share_id}`} target="_blank" rel="noreferrer" className="underline font-medium">/share/{trip.share_id}</a>
           </div>
@@ -68,8 +97,8 @@ export default function TripWorkspace() {
       </header>
 
       {showEditTripModal && (
-        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
-          <div className="bg-white p-6 rounded-xl w-full max-w-md">
+        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
+          <div className="bg-white p-6 rounded-xl w-full max-w-lg max-h-[90vh] overflow-y-auto">
             <h3 className="text-lg font-bold mb-4">Edit Trip Settings</h3>
             <form onSubmit={handleUpdateTrip} className="space-y-4">
               <div>
@@ -87,8 +116,45 @@ export default function TripWorkspace() {
                 </div>
               </div>
               <div>
-                <label className="block text-sm font-medium text-slate-700">Budget Limit</label>
+                <label className="block text-sm font-medium text-slate-700">Budget Limit (₹)</label>
                 <input type="number" className="mt-1 w-full border rounded-md p-2" value={editTripForm.budget_limit} onChange={e => setEditTripForm({...editTripForm, budget_limit: e.target.value})} />
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-slate-700 mb-2">Budget Tier (for reference estimates)</label>
+                <div className="flex gap-2">
+                  {TIER_OPTIONS.map(tier => (
+                    <button key={tier} type="button"
+                      onClick={() => setEditTripForm({...editTripForm, budget_tier: editTripForm.budget_tier === tier ? '' : tier})}
+                      className={`px-3 py-1.5 rounded-full text-sm font-medium border transition capitalize ${
+                        editTripForm.budget_tier === tier
+                          ? 'bg-indigo-600 text-white border-indigo-600'
+                          : 'bg-white text-slate-600 border-slate-300 hover:border-indigo-400'
+                      }`}
+                    >
+                      {tier}
+                    </button>
+                  ))}
+                </div>
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-slate-700 mb-2">Travel Interests</label>
+                <div className="flex flex-wrap gap-2">
+                  {INTEREST_OPTIONS.map(interest => {
+                    const current = editTripForm.interests ? editTripForm.interests.split(',').map(i => i.trim()) : [];
+                    const selected = current.includes(interest);
+                    return (
+                      <button key={interest} type="button" onClick={() => toggleInterest(interest)}
+                        className={`px-3 py-1.5 rounded-full text-sm font-medium border transition ${
+                          selected
+                            ? 'bg-indigo-600 text-white border-indigo-600'
+                            : 'bg-white text-slate-600 border-slate-300 hover:border-indigo-400'
+                        }`}
+                      >
+                        {interest}
+                      </button>
+                    );
+                  })}
+                </div>
               </div>
               <div>
                 <label className="block text-sm font-medium text-slate-700">Description</label>
@@ -119,9 +185,9 @@ export default function TripWorkspace() {
         {activeTab === 'overview' && (
           <TripOverviewTab trip={trip} refreshTrip={refreshTrip} />
         )}
-        
+
         {activeTab === 'itinerary' && (
-          <TripItineraryTab trip={trip} />
+          <TripItineraryTab trip={trip} refreshTrip={refreshTrip} />
         )}
 
         {activeTab === 'budget' && (
@@ -130,27 +196,27 @@ export default function TripWorkspace() {
 
         {activeTab === 'timeline' && (
           <div className="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
-             <h2 className="text-xl font-bold mb-4">Timeline</h2>
-             <div className="space-y-6">
-               {(trip.stops || []).map(stop => (
-                 <div key={stop.id} className="relative pl-6 border-l-2 border-indigo-200">
-                   <div className="absolute w-3 h-3 bg-indigo-600 rounded-full -left-[7px] top-2"></div>
-                   <h3 className="font-bold text-lg">{stop.city?.name || 'Unknown City'}</h3>
-                   <p className="text-slate-500 text-sm mb-3">{stop.start_date} to {stop.end_date}</p>
-                   <div className="space-y-3">
-                     {(stop.activities || []).map(act => (
-                       <div key={act.id} className="bg-slate-50 p-3 rounded-lg border border-slate-100">
-                         <div className="font-medium">{act.activity?.name}</div>
-                         <div className="text-sm text-slate-500">{act.activity_date} at {act.start_time || 'Anytime'}</div>
-                       </div>
-                     ))}
-                   </div>
-                 </div>
-               ))}
-               {(!trip.stops || trip.stops.length === 0) && (
-                 <p className="text-slate-500">No destinations added yet.</p>
-               )}
-             </div>
+            <h2 className="text-xl font-bold mb-4">Timeline</h2>
+            <div className="space-y-6">
+              {(trip.stops || []).map(stop => (
+                <div key={stop.id} className="relative pl-6 border-l-2 border-indigo-200">
+                  <div className="absolute w-3 h-3 bg-indigo-600 rounded-full -left-[7px] top-2"></div>
+                  <h3 className="font-bold text-lg">{stop.city?.city || 'Unknown City'}{stop.city?.state ? `, ${stop.city.state}` : ''}</h3>
+                  <p className="text-slate-500 text-sm mb-3">{stop.start_date} to {stop.end_date}</p>
+                  <div className="space-y-3">
+                    {(stop.activities || []).map(act => (
+                      <div key={act.id} className="bg-slate-50 p-3 rounded-lg border border-slate-100">
+                        <div className="font-medium">{act.custom_place_name || act.activity?.name}</div>
+                        <div className="text-sm text-slate-500">{act.activity_date} at {act.start_time || 'Anytime'}</div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ))}
+              {(!trip.stops || trip.stops.length === 0) && (
+                <p className="text-slate-500">No destinations added yet.</p>
+              )}
+            </div>
           </div>
         )}
       </div>

@@ -1,13 +1,17 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import { tripsApi, masterApi } from '../../api';
+import RecommendationPanel from './RecommendationPanel';
 
 export default function TripOverviewTab({ trip, refreshTrip }) {
   const [showStopModal, setShowStopModal] = useState(false);
   const [showActivityModal, setShowActivityModal] = useState(false);
   const [showPlaceModal, setShowPlaceModal] = useState(false);
   const [activeStopId, setActiveStopId] = useState(null);
-  
+
   const [cities, setCities] = useState([]);
+  const [citySearch, setCitySearch] = useState('');
+  const [showSuggestions, setShowSuggestions] = useState(false);
+  const [selectedCityName, setSelectedCityName] = useState('');
   const [activities, setActivities] = useState([]);
 
   // Form states
@@ -16,10 +20,22 @@ export default function TripOverviewTab({ trip, refreshTrip }) {
   const [placeForm, setPlaceForm] = useState({ custom_place_name: '', activity_date: '', start_time: '', custom_cost: '', notes: '' });
 
   useEffect(() => {
-    if (showStopModal) {
-      masterApi.getCities().then(res => setCities(res)).catch(console.error);
+    if (showStopModal && citySearch !== selectedCityName) {
+      const timer = setTimeout(() => {
+        masterApi.getCities(citySearch).then(res => setCities(res)).catch(console.error);
+        setShowSuggestions(true);
+      }, 200);
+      return () => clearTimeout(timer);
     }
-  }, [showStopModal]);
+  }, [showStopModal, citySearch, selectedCityName]);
+
+  const selectCity = (city) => {
+    setStopForm({...stopForm, city_id: city.id});
+    const fullName = `${city.city}, ${city.state}`;
+    setCitySearch(fullName);
+    setSelectedCityName(fullName);
+    setShowSuggestions(false);
+  };
 
   const openActivityModal = (stopId, cityId) => {
     setActiveStopId(stopId);
@@ -42,14 +58,16 @@ export default function TripOverviewTab({ trip, refreshTrip }) {
       });
       setShowStopModal(false);
       setStopForm({ city_id: '', start_date: '', end_date: '' });
+      setCitySearch('');
+      setSelectedCityName('');
       refreshTrip();
     } catch (err) {
-      alert(err.response?.data?.detail || "Error adding destination.");
+      alert(err.response?.data?.detail || 'Error adding destination.');
     }
   };
 
   const handleDeleteStop = async (stopId) => {
-    if(!window.confirm('Delete this destination?')) return;
+    if (!window.confirm('Delete this destination?')) return;
     try {
       await tripsApi.deleteStop(trip.id, stopId);
       refreshTrip();
@@ -71,7 +89,7 @@ export default function TripOverviewTab({ trip, refreshTrip }) {
       setActivityForm({ activity_id: '', activity_date: '', start_time: '', custom_cost: '' });
       refreshTrip();
     } catch (err) {
-      alert("Error adding activity. Ensure date is within stop boundaries.");
+      alert('Error adding activity. Ensure date is within stop boundaries.');
     }
   };
 
@@ -89,12 +107,12 @@ export default function TripOverviewTab({ trip, refreshTrip }) {
       setPlaceForm({ custom_place_name: '', activity_date: '', start_time: '', custom_cost: '', notes: '' });
       refreshTrip();
     } catch (err) {
-      alert("Error adding custom place. Ensure date is within stop boundaries.");
+      alert('Error adding custom place. Ensure date is within stop boundaries.');
     }
   };
 
   const handleDeleteActivity = async (stopId, activityId) => {
-    if(!window.confirm('Delete this activity?')) return;
+    if (!window.confirm('Delete this activity?')) return;
     try {
       await tripsApi.deleteActivity(stopId, activityId);
       refreshTrip();
@@ -102,6 +120,27 @@ export default function TripOverviewTab({ trip, refreshTrip }) {
       console.error(err);
     }
   };
+
+  // Collect all place names already in any stop's activities (for exclusion)
+  const allSelectedPlaceNames = useMemo(() => {
+    const names = [];
+    for (const stop of (trip.stops || [])) {
+      for (const act of (stop.activities || [])) {
+        if (act.custom_place_name) names.push(act.custom_place_name);
+      }
+    }
+    return names;
+  }, [trip.stops]);
+
+  const tripDurationDays = useMemo(() => {
+    if (!trip.start_date || !trip.end_date) return null;
+    const diff = Math.round((new Date(trip.end_date) - new Date(trip.start_date)) / 86400000) + 1;
+    return Math.max(1, diff);
+  }, [trip.start_date, trip.end_date]);
+
+  const filteredCities = cities.filter(c =>
+    !citySearch || `${c.city} ${c.state}`.toLowerCase().includes(citySearch.toLowerCase())
+  );
 
   return (
     <div className="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
@@ -111,48 +150,74 @@ export default function TripOverviewTab({ trip, refreshTrip }) {
           + Add Destination
         </button>
       </div>
-      
-      <p className="text-slate-700 mb-6">{trip.description || "No description provided."}</p>
-      
-      <div className="space-y-6">
-        {(trip.stops || []).map(stop => (
-          <div key={stop.id} className="border border-slate-200 rounded-lg p-5">
-            <div className="flex justify-between items-center border-b border-slate-100 pb-3 mb-4">
-              <div>
-                <h3 className="font-bold text-lg text-slate-800">{stop.city?.name || 'Unknown'}</h3>
-                <p className="text-sm text-slate-500">{stop.start_date} to {stop.end_date}</p>
-              </div>
-              <div className="flex space-x-2">
-                <button onClick={() => openPlaceModal(stop.id)} className="text-indigo-600 text-sm font-medium hover:underline">Add Place</button>
-                <button onClick={() => openActivityModal(stop.id, stop.city_id)} className="text-indigo-600 text-sm font-medium hover:underline ml-3">Add Activity</button>
-                <button onClick={() => handleDeleteStop(stop.id)} className="text-red-500 text-sm font-medium hover:underline ml-3">Remove</button>
-              </div>
-            </div>
 
-            <div className="space-y-2 pl-4 border-l-2 border-slate-100">
-              {(stop.activities || []).length === 0 ? (
-                <p className="text-sm text-slate-400 italic">No activities added yet.</p>
-              ) : (
-                (stop.activities || []).map(act => (
-                  <div key={act.id} className="flex justify-between items-center py-2">
-                    <div>
-                      <p className="font-medium text-slate-700">{act.custom_place_name || act.activity?.name}</p>
-                      <p className="text-xs text-slate-500">{act.activity_date} {act.start_time ? `at ${act.start_time}` : ''}</p>
-                    </div>
-                    <div className="flex items-center space-x-4">
-                      {act.custom_cost !== null ? <span className="text-sm font-medium text-emerald-600">₹{act.custom_cost}</span> : 
-                       act.activity?.cost ? <span className="text-sm font-medium text-slate-500">₹{act.activity.cost}</span> : null}
-                      <button onClick={() => handleDeleteActivity(stop.id, act.id)} className="text-red-400 hover:text-red-600">×</button>
-                    </div>
-                  </div>
-                ))
-              )}
+      <p className="text-slate-700 mb-6">{trip.description || 'No description provided.'}</p>
+
+      <div className="space-y-8">
+        {(trip.stops || []).map(stop => {
+          const stopDays = stop.start_date && stop.end_date
+            ? Math.max(1, Math.round((new Date(stop.end_date) - new Date(stop.start_date)) / 86400000) + 1)
+            : tripDurationDays;
+
+          return (
+            <div key={stop.id} className="border border-slate-200 rounded-xl overflow-hidden">
+              <div className="bg-slate-50 px-5 py-4 border-b border-slate-200 flex justify-between items-center">
+                <div>
+                  <h3 className="font-bold text-lg text-slate-800">
+                    {stop.city?.city || 'Unknown'}
+                    {stop.city?.state && <span className="font-normal text-slate-500 text-base">, {stop.city.state}</span>}
+                  </h3>
+                  <p className="text-sm text-slate-500">{stop.start_date} → {stop.end_date}</p>
+                </div>
+                <div className="flex space-x-3">
+                  <button onClick={() => openPlaceModal(stop.id)} className="text-indigo-600 text-sm font-medium hover:underline">Add Place</button>
+                  <button onClick={() => openActivityModal(stop.id, stop.city_id)} className="text-indigo-600 text-sm font-medium hover:underline ml-2">Add Activity</button>
+                  <button onClick={() => handleDeleteStop(stop.id)} className="text-red-500 text-sm font-medium hover:underline ml-2">Remove</button>
+                </div>
+              </div>
+
+              <div className="p-5">
+                <div className="space-y-2 pl-4 border-l-2 border-slate-100">
+                  {(stop.activities || []).length === 0 ? (
+                    <p className="text-sm text-slate-400 italic">No activities added yet.</p>
+                  ) : (
+                    (stop.activities || []).map(act => (
+                      <div key={act.id} className="flex justify-between items-center py-2">
+                        <div>
+                          <p className="font-medium text-slate-700">{act.custom_place_name || act.activity?.name}</p>
+                          <p className="text-xs text-slate-500">{act.activity_date}{act.start_time ? ` at ${act.start_time}` : ''}</p>
+                        </div>
+                        <div className="flex items-center space-x-4">
+                          {act.custom_cost !== null ? <span className="text-sm font-medium text-emerald-600">₹{act.custom_cost}</span> :
+                           act.activity?.cost ? <span className="text-sm font-medium text-slate-500">₹{act.activity.cost}</span> : null}
+                          <button onClick={() => handleDeleteActivity(stop.id, act.id)} className="text-red-400 hover:text-red-600">×</button>
+                        </div>
+                      </div>
+                    ))
+                  )}
+                </div>
+
+                {/* Recommendation Panel per stop */}
+                {stop.city_id && (
+                  <RecommendationPanel
+                    cityId={stop.city_id}
+                    stopId={stop.id}
+                    activityDate={stop.start_date}
+                    interests={trip.interests}
+                    budgetTier={trip.budget_tier}
+                    tripDurationDays={stopDays}
+                    excludePlaceNames={allSelectedPlaceNames}
+                    onAdded={refreshTrip}
+                  />
+                )}
+              </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
         {(!trip.stops || trip.stops.length === 0) && (
           <div className="text-center py-10 bg-slate-50 rounded-lg border border-dashed border-slate-300">
-            <p className="text-slate-500">No destinations added yet.</p>
+            <p className="text-slate-500 font-medium">No destinations added yet.</p>
+            <p className="text-slate-400 text-sm mt-1">Add a city to see personalized recommendations.</p>
           </div>
         )}
       </div>
@@ -163,12 +228,29 @@ export default function TripOverviewTab({ trip, refreshTrip }) {
           <div className="bg-white p-6 rounded-xl w-full max-w-md">
             <h3 className="text-lg font-bold mb-4">Add Destination</h3>
             <form onSubmit={handleAddStop} className="space-y-4">
-              <div>
+              <div className="relative">
                 <label className="block text-sm font-medium text-slate-700">City</label>
-                <select required className="mt-1 w-full border rounded-md p-2" value={stopForm.city_id} onChange={e => setStopForm({...stopForm, city_id: e.target.value})}>
-                  <option value="">Select a city</option>
-                  {cities.map(c => <option key={c.id} value={c.id}>{c.name}, {c.country}</option>)}
-                </select>
+                <input
+                  type="text" placeholder="Type city name..." className="mt-1 w-full border rounded-md p-2 text-sm"
+                  value={citySearch}
+                  onChange={e => {
+                    setCitySearch(e.target.value);
+                    setStopForm({...stopForm, city_id: ''});
+                  }}
+                  onFocus={() => setShowSuggestions(true)}
+                  onBlur={() => setTimeout(() => setShowSuggestions(false), 200)}
+                />
+                {showSuggestions && cities.length > 0 && (
+                  <ul className="absolute z-10 mt-1 w-full bg-white border border-slate-300 rounded-md shadow-lg max-h-60 overflow-auto">
+                    {cities.map(c => (
+                      <li key={c.id} className="px-4 py-2 hover:bg-indigo-50 cursor-pointer text-sm" onClick={() => selectCity(c)}>
+                        {c.city}, {c.state}
+                      </li>
+                    ))}
+                  </ul>
+                )}
+                {/* Hidden input to ensure native form validation triggers if no city selected */}
+                <input type="text" required className="opacity-0 absolute h-0 w-0" value={stopForm.city_id} onChange={() => {}} />
               </div>
               <div className="grid grid-cols-2 gap-4">
                 <div>

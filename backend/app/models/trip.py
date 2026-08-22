@@ -22,6 +22,9 @@ class Trip(Base):
     budget_limit: Mapped[float | None] = mapped_column(Float, nullable=True)
     cover_image: Mapped[str | None] = mapped_column(String(255), nullable=True)
     share_id: Mapped[str] = mapped_column(String(100), unique=True, default=generate_share_id, nullable=False)
+    # Recommendation context
+    interests: Mapped[str | None] = mapped_column(String(200), nullable=True)  # e.g. "Heritage,Nature,Food"
+    budget_tier: Mapped[str | None] = mapped_column(String(20), nullable=True)  # budget / mid-range / luxury
     
     created_at: Mapped[datetime.datetime] = mapped_column(DateTime(timezone=True), default=get_utc_now, nullable=False)
     updated_at: Mapped[datetime.datetime] = mapped_column(DateTime(timezone=True), default=get_utc_now, onupdate=get_utc_now, nullable=False)
@@ -40,7 +43,7 @@ class TripStop(Base):
     display_order: Mapped[int] = mapped_column(Integer, default=0)
 
     trip: Mapped["Trip"] = relationship(back_populates="stops")
-    city = relationship("City")
+    city = relationship("City", lazy="joined")
     activities: Mapped[list["TripActivity"]] = relationship(back_populates="trip_stop", cascade="all, delete-orphan", order_by="TripActivity.display_order")
 
 class TripActivity(Base):
@@ -80,4 +83,4 @@ class SavedDestination(Base):
     city_id: Mapped[int] = mapped_column(ForeignKey("cities.id", ondelete="CASCADE"), nullable=False)
     created_at: Mapped[datetime.datetime] = mapped_column(DateTime(timezone=True), default=get_utc_now, nullable=False)
     
-    city = relationship("City")
+    city = relationship("City", lazy="joined")

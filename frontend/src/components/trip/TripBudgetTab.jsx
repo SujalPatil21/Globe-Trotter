@@ -1,10 +1,11 @@
 import { useState } from 'react';
 import { tripsApi } from '../../api';
+import BudgetReferencePanel from './BudgetReferencePanel';
 
 export default function TripBudgetTab({ trip, budget, refreshTrip }) {
   const [isEditingLimit, setIsEditingLimit] = useState(false);
   const [budgetLimit, setBudgetLimit] = useState(budget?.budget_limit || '');
-  
+
   const [expenseForm, setExpenseForm] = useState({ category: 'OTHER', amount: '', description: '', expense_date: '' });
   const [isAddingExpense, setIsAddingExpense] = useState(false);
 
@@ -15,7 +16,7 @@ export default function TripBudgetTab({ trip, budget, refreshTrip }) {
       setIsEditingLimit(false);
       refreshTrip();
     } catch (err) {
-      alert("Error updating budget limit");
+      alert('Error updating budget limit');
     }
   };
 
@@ -30,17 +31,17 @@ export default function TripBudgetTab({ trip, budget, refreshTrip }) {
       setExpenseForm({ category: 'OTHER', amount: '', description: '', expense_date: '' });
       refreshTrip();
     } catch (err) {
-      alert("Error adding expense");
+      alert('Error adding expense');
     }
   };
 
   const handleDeleteExpense = async (expenseId) => {
-    if (window.confirm("Are you sure you want to delete this expense?")) {
+    if (window.confirm('Are you sure you want to delete this expense?')) {
       try {
         await tripsApi.deleteExpense(trip.id, expenseId);
         refreshTrip();
       } catch (err) {
-        alert("Error deleting expense");
+        alert('Error deleting expense');
       }
     }
   };
@@ -48,12 +49,13 @@ export default function TripBudgetTab({ trip, budget, refreshTrip }) {
   if (!budget) return <div>Loading budget...</div>;
 
   const pct = budget.budget_limit ? Math.min((budget.grand_total / budget.budget_limit) * 100, 100) : 0;
-  
+
   return (
     <div className="space-y-6">
+      {/* ── Actual user budget ── */}
       <div className="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
         <div className="flex justify-between items-center mb-6">
-          <h2 className="text-2xl font-bold text-slate-800">Budget Overview</h2>
+          <h2 className="text-2xl font-bold text-slate-800">Your Trip Budget</h2>
           {!isEditingLimit ? (
             <button onClick={() => setIsEditingLimit(true)} className="text-indigo-600 hover:underline text-sm font-medium">Edit Limit</button>
           ) : (
@@ -64,11 +66,11 @@ export default function TripBudgetTab({ trip, budget, refreshTrip }) {
             </form>
           )}
         </div>
-        
+
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
           <div className="bg-slate-50 p-4 rounded-lg border border-slate-100">
             <div className="text-slate-500 text-sm font-medium">Budget Limit</div>
-            <div className="text-2xl font-bold text-slate-800">₹{budget.budget_limit || 'Not set'}</div>
+            <div className="text-2xl font-bold text-slate-800">{budget.budget_limit ? `₹${budget.budget_limit.toLocaleString()}` : 'Not set'}</div>
           </div>
           <div className="bg-slate-50 p-4 rounded-lg border border-slate-100">
             <div className="text-slate-500 text-sm font-medium">Total Spent</div>
@@ -188,6 +190,17 @@ export default function TripBudgetTab({ trip, budget, refreshTrip }) {
             </table>
           </div>
         </div>
+      </div>
+
+      {/* ── Reference Budget — completely separate from actual spending ── */}
+      <div>
+        <div className="flex items-center gap-3 mb-2">
+          <h2 className="text-lg font-semibold text-slate-700">Reference Budget Estimates</h2>
+          <span className="text-xs text-slate-400 bg-slate-100 px-2 py-0.5 rounded">
+            Approximate only · does not affect your actual spending
+          </span>
+        </div>
+        <BudgetReferencePanel trip={trip} budget={budget} budgetTier={trip.budget_tier} />
       </div>
     </div>
   );

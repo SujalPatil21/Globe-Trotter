@@ -1,8 +1,13 @@
 import { useState, useMemo, useEffect } from 'react';
 import { tripsApi, masterApi } from '../../api';
+import RecommendationPanel from './RecommendationPanel';
 
 export default function TripItineraryTab({ trip, refreshTrip }) {
   const [cities, setCities] = useState([]);
+  const [citySearch, setCitySearch] = useState('');
+  const [showSuggestions, setShowSuggestions] = useState(false);
+  const [selectedCityName, setSelectedCityName] = useState('');
+
   const [activitiesForCity, setActivitiesForCity] = useState([]);
   
   // Modals visibility
@@ -22,8 +27,22 @@ export default function TripItineraryTab({ trip, refreshTrip }) {
   const [activeDateStr, setActiveDateStr] = useState(null);
 
   useEffect(() => {
-    masterApi.getCities().then(res => setCities(res)).catch(console.error);
-  }, []);
+    if (showStopModal && citySearch !== selectedCityName) {
+      const timer = setTimeout(() => {
+        masterApi.getCities(citySearch).then(res => setCities(res)).catch(console.error);
+        setShowSuggestions(true);
+      }, 200);
+      return () => clearTimeout(timer);
+    }
+  }, [showStopModal, citySearch, selectedCityName]);
+
+  const selectCity = (city) => {
+    setStopForm({...stopForm, city_id: city.id});
+    const fullName = `${city.city}, ${city.state}`;
+    setCitySearch(fullName);
+    setSelectedCityName(fullName);
+    setShowSuggestions(false);
+  };
 
   const itineraryDays = useMemo(() => {
     if (!trip || !trip.start_date || !trip.end_date) return [];
@@ -77,6 +96,8 @@ export default function TripItineraryTab({ trip, refreshTrip }) {
       });
       setShowStopModal(false);
       setStopForm({ city_id: '', start_date: '', end_date: '' });
+      setCitySearch('');
+      setSelectedCityName('');
       refreshTrip();
     } catch (err) {
       alert(err.response?.data?.detail || "Error adding destination.");
@@ -187,28 +208,28 @@ export default function TripItineraryTab({ trip, refreshTrip }) {
       ) : (
         <div className="space-y-8">
           {itineraryDays.map((day) => (
-            <div key={day.dateStr} className="border border-slate-200 rounded-xl overflow-hidden">
-              <div className="bg-slate-50 px-5 py-3 border-b border-slate-200 flex justify-between items-center">
-                <div>
-                  <h3 className="font-bold text-lg text-slate-800">Day {day.dayNum} &mdash; {day.dateStr}</h3>
-                  <p className="text-sm text-slate-500">{day.displayDate}</p>
+            <div key={day.dateStr} className="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
+                <div className="bg-slate-50 px-5 py-3 border-b border-slate-200 flex justify-between items-center">
+                  <div>
+                    <h3 className="font-bold text-lg text-slate-800">Day {day.dayNum} &mdash; {day.dateStr}</h3>
+                    <p className="text-sm text-slate-500">{day.displayDate}</p>
+                  </div>
+                  {day.stop && (
+                    <div className="flex items-center gap-3">
+                      <span className="bg-indigo-100 text-indigo-800 text-sm font-medium px-3 py-1 rounded-full">
+                        📍 {day.stop.city?.city || 'Unknown'}{day.stop.city?.state ? `, ${day.stop.city.state}` : ''}
+                      </span>
+                      <button onClick={() => handleRemoveStop(day.stop.id)} className="text-red-500 text-xs hover:underline">Remove Stop</button>
+                    </div>
+                  )}
                 </div>
-                {day.stop && (
-                  <div className="flex items-center gap-3">
-                    <span className="bg-indigo-100 text-indigo-800 text-sm font-medium px-3 py-1 rounded-full">
-                      📍 {day.stop.city?.name || 'Unknown'}
-                    </span>
-                    <button onClick={() => handleRemoveStop(day.stop.id)} className="text-red-500 text-xs hover:underline">Remove Stop</button>
-                  </div>
-                )}
-              </div>
               
-              <div className="p-5">
-                {!day.stop ? (
-                  <div className="text-center py-4 bg-slate-50 border border-dashed border-slate-300 rounded-lg">
-                    <p className="text-slate-500 text-sm">No destination scheduled for this date.</p>
-                  </div>
-                ) : (
+                <div className="p-5">
+                  {!day.stop ? (
+                    <div className="text-center py-4 bg-slate-50 border border-dashed border-slate-300 rounded-lg">
+                      <p className="text-slate-500 text-sm">No destination scheduled for this date.</p>
+                    </div>
+                  ) : (
                   <div className="space-y-6">
                     <div className="flex gap-2">
                       <button onClick={() => openPlaceModal(day.stop.id, day.dateStr)} className="bg-indigo-50 text-indigo-700 px-3 py-1 rounded-md text-sm font-medium hover:bg-indigo-100">+ Add Place</button>
@@ -244,10 +265,22 @@ export default function TripItineraryTab({ trip, refreshTrip }) {
                         ))
                       )}
                     </div>
+
+                    {/* Recommendations for this stop/day */}
+                    <RecommendationPanel
+                      cityId={day.stop.city_id}
+                      stopId={day.stop.id}
+                      activityDate={day.dateStr}
+                      interests={trip.interests}
+                      budgetTier={trip.budget_tier}
+                      tripDurationDays={Math.max(1, Math.round((new Date(day.stop.end_date) - new Date(day.stop.start_date)) / 86400000) + 1)}
+                      excludePlaceNames={(trip.stops || []).flatMap(s => (s.activities || []).map(a => a.custom_place_name).filter(Boolean))}
+                      onAdded={refreshTrip}
+                    />
                   </div>
                 )}
+                </div>
               </div>
-            </div>
           ))}
         </div>
       )}
@@ -258,12 +291,28 @@ export default function TripItineraryTab({ trip, refreshTrip }) {
           <div className="bg-white p-6 rounded-xl w-full max-w-md">
             <h3 className="text-lg font-bold mb-4">Add Destination</h3>
             <form onSubmit={handleAddStop} className="space-y-4">
-              <div>
+              <div className="relative">
                 <label className="block text-sm font-medium text-slate-700">City</label>
-                <select required className="mt-1 w-full border rounded-md p-2" value={stopForm.city_id} onChange={e => setStopForm({...stopForm, city_id: e.target.value})}>
-                  <option value="">Select a city</option>
-                  {cities.map(c => <option key={c.id} value={c.id}>{c.name}, {c.country}</option>)}
-                </select>
+                <input
+                  type="text" placeholder="Type city name..." className="mt-1 w-full border rounded-md p-2 text-sm"
+                  value={citySearch}
+                  onChange={e => {
+                    setCitySearch(e.target.value);
+                    setStopForm({...stopForm, city_id: ''});
+                  }}
+                  onFocus={() => setShowSuggestions(true)}
+                  onBlur={() => setTimeout(() => setShowSuggestions(false), 200)}
+                />
+                {showSuggestions && cities.length > 0 && (
+                  <ul className="absolute z-10 mt-1 w-full bg-white border border-slate-300 rounded-md shadow-lg max-h-60 overflow-auto">
+                    {cities.map(c => (
+                      <li key={c.id} className="px-4 py-2 hover:bg-indigo-50 cursor-pointer text-sm" onClick={() => selectCity(c)}>
+                        {c.city}, {c.state}
+                      </li>
+                    ))}
+                  </ul>
+                )}
+                <input type="text" required className="opacity-0 absolute h-0 w-0" value={stopForm.city_id} onChange={() => {}} />
               </div>
               <div className="grid grid-cols-2 gap-4">
                 <div>

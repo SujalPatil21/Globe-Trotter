@@ -10,6 +10,8 @@ class TripCreate(BaseModel):
     end_date: date
     budget_limit: Optional[float] = None
     cover_image: Optional[str] = None
+    interests: Optional[str] = None       # comma-separated e.g. "Heritage,Nature"
+    budget_tier: Optional[str] = None     # "budget" / "mid-range" / "luxury"
 
 class TripUpdate(BaseModel):
     name: Optional[str] = None
@@ -18,6 +20,8 @@ class TripUpdate(BaseModel):
     end_date: Optional[date] = None
     budget_limit: Optional[float] = None
     cover_image: Optional[str] = None
+    interests: Optional[str] = None
+    budget_tier: Optional[str] = None
 
 class TripResponse(TripCreate):
     id: int

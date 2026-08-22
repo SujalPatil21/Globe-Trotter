@@ -166,3 +166,40 @@ export const savedDestinationsApi = {
     return response.data;
   }
 };
+
+export const recommendationsApi = {
+  // Consolidated city bundle: places + restaurants + budget
+  getCityBundle: async (cityId, params = {}) => {
+    const response = await apiClient.get(`/recommendations/cities/${cityId}`, { params });
+    return response.data;
+  },
+  // Just places for a city
+  getCityPlaces: async (cityId, params = {}) => {
+    const response = await apiClient.get(`/recommendations/cities/${cityId}/places`, { params });
+    return response.data;
+  },
+  // Just restaurants for a city
+  getCityRestaurants: async (cityId, params = {}) => {
+    const response = await apiClient.get(`/recommendations/cities/${cityId}/restaurants`, { params });
+    return response.data;
+  },
+  // Single city budget reference
+  getBudgetReference: async (cityId, tier, days) => {
+    const params = { city_id: cityId, days: days || 1 };
+    if (tier) params.tier = tier;
+    const response = await apiClient.get('/recommendations/budget', { params });
+    return response.data;
+  },
+  // Multi-city budget breakdown
+  getMultiCityBudget: async (stops, remainingBudget) => {
+    const params = {};
+    if (remainingBudget != null) params.remaining_budget = remainingBudget;
+    const response = await apiClient.post('/recommendations/budget/multi-city', stops, { params });
+    return response.data;
+  },
+  // Trip-aware recommendations (auth required)
+  getTripRecommendations: async (tripId, params = {}) => {
+    const response = await apiClient.get(`/recommendations/trips/${tripId}`, { params });
+    return response.data;
+  },
+};

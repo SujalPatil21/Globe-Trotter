@@ -1,5 +1,6 @@
 from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
+from sqlalchemy import func
 from typing import Dict, Any
 import datetime
 from app.db.database import get_db
@@ -17,14 +18,14 @@ def get_utc_now() -> datetime.date:
 def get_dashboard_summary(db: Session = Depends(get_db), current_user: User = Depends(get_current_user)):
     today = get_utc_now()
     trips = db.query(Trip).filter(Trip.user_id == current_user.id).all()
-    
+
     upcoming = [t for t in trips if t.start_date > today]
     ongoing = [t for t in trips if t.start_date <= today <= t.end_date]
     completed = [t for t in trips if t.end_date < today]
-    
-    # Recommended cities (just a simple fetch for MVP)
-    recommended = db.query(City).order_by(City.popularity.desc()).limit(3).all()
-    
+
+    # Recommended cities: random sample from DB (no popularity field in new schema)
+    recommended = db.query(City).order_by(func.random()).limit(6).all()
+
     return {
         "summary": {
             "upcoming_count": len(upcoming),

@@ -9,6 +9,7 @@ import TripCreate from './pages/TripCreate';
 import TripWorkspace from './pages/TripWorkspace';
 import PublicTrip from './pages/PublicTrip';
 import Profile from './pages/Profile';
+import CityDiscovery from './pages/CityDiscovery';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/forgot-password" element={<ForgotPassword />} />
           <Route path="/reset-password" element={<ResetPassword />} />
           <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/cities/:cityId" element={<CityDiscovery />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/trips/create" element={<TripCreate />} />
           <Route path="/trips/:tripId/*" element={<TripWorkspace />} />
